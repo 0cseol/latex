@@ -1,0 +1,44 @@
+\documentclass[10pt]{book}
+\input{../../structure/preamble.tex} % preamble(defs) 호출. 두 단계 올라가서 다시 내려옴
+\input{../includes/figures.tex} % 그림 파일 모음 호출. 한 단계 올라가서 다시 내려옴
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % 참고문헌 설정
+\addbibresource{../bib/papers.bib}
+\addbibresource{../bib/references.bib}
+\addbibresource{../bib/websites.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 모드 변경
+\seolfmode = 2  % 1, 2, 3 으로 변경
+
+
+\begin{document}
+\nopagenumber % 페이지 넘버 표시하지 않기
+\input{../includes/title.tex} % 타이틀
+\tableofcontents % 목차 생성
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 본문
+\newgeometry{top=25mm, bottom=25mm, inner=20mm, outer=60mm} % 학습지처럼 inner, outer로 여백 변경
+\drawlinestrue % outer에 선 긋기
+\cleardoublepage % 양면인쇄를 위해 챕터가 오른쪽(홀수)로 시작되도록 함
+\setcounter{page}{1} % 1페이지로 시작
+\pagenumber % 페이지 넘버 표시
+
+
+\input{../chapters/chapter01.tex}
+\input{../chapters/chapter02.tex}
+\input{../chapters/chapter03.tex}
+\input{../chapters/chapter04.tex}
+
+
+\newpage
+\drawlinesfalse % 선 긋기 중단
+\restoregeometry % 기본용지로 변경
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 글 마무리
+\appendix % 한 번만 선언(글 형식 바뀜)
+\input{../appendix/appendix01.tex}
+\input{../appendix/appendix02.tex}
+\begin{sloppypar} \printbibliography % 참고문헌 - sloppy로 강제 줄바꿈
+    \end{sloppypar}
+\end{document}

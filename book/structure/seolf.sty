@@ -1,0 +1,104 @@
+%% \seolfa{단어} 형태로 사용
+%% 출력 모드는 \seolfmode 값으로 제어
+% 1=그대로 출력
+% 2=( 글자 숨김 ), 학생용 빈칸
+% 3=( 붉게 강조 ), 답안배포용
+% 4=( 붉게 강조 ) 및 메모 노출, 교사용
+
+\newcount\seolfmode
+
+\newcommand{\seolfa}[1]{% a는 괄호가 있음. mbox로 하나의 덩어리로 묶어서 줄바꿈 되지 않게 함.
+  \ifnum\seolfmode=1
+    \mbox{\hly{\textbf{#1}}}%
+  \else\ifnum\seolfmode=2
+    \mbox{\textbf{(\quad \phantom{#1} \quad)}}%
+  \else\ifnum\seolfmode=3
+    \mbox{\textcolor{red}{\textbf{(\quad \hly{#1} \quad)}}}%
+  \else\ifnum\seolfmode=4
+    \mbox{\textcolor{red}{\textbf{(\quad \hly{#1} \quad)}}}%
+  \fi\fi\fi\fi
+}
+
+\newcommand{\seolfb}[1]{% b는 괄호가 없음. 표 안의 내용 등에 활용. 줄바꿈 가능
+  \ifnum\seolfmode=1
+    \hly{\textbf{#1}}%
+  \else\ifnum\seolfmode=2
+    \hlw{\textcolor{white}{\textbf{#1}}}%
+  \else\ifnum\seolfmode=3
+    \hly{\textcolor{red}{\textbf{#1}}}%
+  \else\ifnum\seolfmode=4
+    \hly{\textcolor{red}{\textbf{#1}}}%
+  \fi\fi\fi\fi
+}
+
+%% 교사용 녹색 하이라이트 (seolfmode가 4일 때만 노란 형광펜 생기고 1,2,3일때는 기본 모드)
+\newcommand{\seolight}[1]{%
+  \ifnum\seolfmode=4
+    \highLight[{[RGB]{160,240,120}}]{#1}%
+  \else #1%
+  \fi}
+
+%% memo 마커 (seolfmode가 4일 때만 출력하고 1,2,3일때는 사라짐 - 처음부터 공간 차지 안함)
+\newcommand{\memo}[1]{%
+  \ifnum\seolfmode=4
+    \tikz[overlay]{% 현재 줄 기준 그림을 겹쳐서 출력 (본문 레이아웃에 영향 없음)
+      \ifodd\value{page} % 페이지 번호가 홀수이면
+        \node[anchor=base west, xshift=+382pt, text width=140pt, align=left] at (0,0) {%
+          \scriptsize\fboxsep=0pt % 작은 글자 크기 설정, 박스 여백 0으로 설정
+          \colorbox{yellow!20}{\parbox{140pt}{\red{\textbf{#1}}}}}; % 노란색 배경 박스에 입력된 내용 출력
+      \else % 페이지 번호가 짝수이면
+        \node[anchor=base west, xshift=-159pt, text width=140pt, align=left] at (0,0) {%
+          \scriptsize\fboxsep=0pt
+          \colorbox{yellow!20}{\parbox{140pt}{\red{\textbf{#1}}}}};\fi}\fi}%
+
+% 솔루션 하이라이트, solight - 모드가 3 이상일때만 orange 출력
+\newcommand{\solight}[1]{%
+  \ifnum\seolfmode>2
+    \highLight[{[RGB]{255,220,70}}]{#1}%
+  \else
+    #1%
+  \fi}
+
+% 답안용 파란 테두리 솔루션박스% 답안용 파란 테두리 솔루션박스 (seolfmode가 3,4일때만 출력하고 1,2일때는 사라짐)
+%\ifnum\seolfmode>2 % seolfmode가 3이상이면 출력
+\newtcolorbox{solsolbox}[1][]{%
+  title={Solution},     % 제목
+  colback=white,        % 흰색 배경
+  colframe=blue!50,     % 중간 파란 테두리
+  coltitle=black,       % 제목 글씨색
+  colbacktitle=white,   % 제목 배경색
+  boxrule=1pt,          % 굵은 테두리 선
+  arc=2mm,              % 살짝 둥근 모서리
+  left=4pt, right=4pt,  % 좌우 여백
+  top=4pt, bottom=4pt   % 상하 여백
+}
+\newtcolorbox{whitesolsolbox}[1][]{ % 위의 solsolbox와 완전 똑같이 만들고 전부 흰색으로 처리함
+  title=\textcolor{white}{Solution}, colback=white, colframe=white, coltitle=white, colbacktitle=white, boxrule=1pt, arc=2mm, left=4pt, right=4pt, top=4pt, bottom=4pt}
+\newenvironment{solbox}[1][]{%
+  \ifnum\seolfmode>2
+    \begin{solsolbox}[#1]%
+  \else
+    \begin{whitesolsolbox}[#1]\color{white}%
+  \fi}{%
+  \ifnum\seolfmode>2
+    \end{solsolbox}%
+  \else
+    \end{whitesolsolbox}\fi}
+
+% 교사용 페이지 삽입 명령 - 3 이상일 때 노출됨
+\newcommand{\insertTeacherPages}[2]{%
+  \ifnum\seolfmode>2
+    \clearpage
+    \thispagestyle{empty}
+    {\centering\red{\Large\textbf{[ 교사용 페이지(양면) 1/2 ]}} \par}
+    \vspace{1em}
+    \normalsize #1
+    \clearpage
+    \thispagestyle{empty}
+    {\centering\red{\Large\textbf{[ 교사용 페이지(양면) 2/2 ]}} \par}
+    \vspace{1em}
+    \normalsize #2
+    \clearpage
+    \addtocounter{page}{-2}
+  \fi
+}

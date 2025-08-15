@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{kotex}
+\setmainhangulfont{Malgun Gothic} % 맑은 고딕 사용
+\usepackage{titlesec}   % 목차 작성 시(part, chapter 등) part라는 말 안나오게 함(넘버링은 유지)
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % 머리말로 인한 상단 줄 제거
+\cfoot{} % 아직 꼬리말 안씀
+
+\titleformat{\part}[display] % 파트 제거
+  {\centering\Huge\bfseries} % 가운데 정렬 + 크게 + 굵게
+  {} % 넘버링 앞부분 제거
+  {0pt}{} %넘버링도 출력 안함
+
+\begin{document}
+
+
+\part{검사지 A}
+본 검사는
+
+
+
+\newpage
+ㅇㅇㅇ
+
+
+
+\newpage
+ㅇㅇㅇ
+
+
+
+\end{document}

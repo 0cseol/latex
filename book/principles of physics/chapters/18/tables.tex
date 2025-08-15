@@ -1,0 +1,75 @@
+% \tab[h]{라벨}{명령이름}{캡션}{정렬}{내용} - 내용 빼고 모두 생략 가능
+
+%% Tab. 몇 가지 온도의 값
+\DeclareTable
+  {some_corresponding_temperatures}
+  {\somecorrespondingtemperatures}
+  {Some corresponding temperatures}
+  {l S[table-format=\approx-3.1] S[table-format=-3.1]}
+  {Temperature & {$^\circ\mathrm{C}$} & {$^\circ\mathrm{F}$} \\\hline
+    \hly{Boiling point of water} & 100 & 212 \\ Normal body temperature & 37.0 & 98.6 \\ Accepted comfort level & 20 & 68 \\ \hly{Freezing point of water} & 0 & 32 \\ Zero of Fahrenheit scale & \approx-18 & 0 \\ Scales coincide & -40 & -40}%
+
+%% Tab. 선팽창계수의 예
+\DeclareTable
+  {some_coefficients_of_linear_expansion}
+  {\somecoefficientsoflinearexpansion}
+  {Some coefficients of linear expansion}
+  {l S[table-format=2.1]}
+  {Substance & {$\alpha(10^{-6}/\mathrm{C}^\circ)$} \\\hline
+  Ice (at $0\,^\circ\mathrm{C}$) & 51 \\ Lead & 29 \\ Aluminum & 23 \\ \hly{Brass} & 19 \\ Copper & 17 \\ Concrete & 12 \\ \hly{Steel} & 11 \\ Glass (ordinary) & 9 \\ Glass (Pyrex) & 3.2 \\ Diamond & 1.2 \\ Invar & 0.7 \\ Fused quartz & 0.5}%
+
+%% Tab. 실온에서 여러 물질의 비열과 몰비열
+\DeclareTable
+  {some_specific_heats_and_molar_specific_heats}
+  {\somespecificheatsandmolarspecificheats}
+  {Some specific heats and molar specific heats at room temperature}
+  {l S[table-format=1.4] S[table-format=4.0] S[table-format=2.1]}{
+          & & & Molar \\
+          & \multicolumn{2}{c}{Specific Heat} & {Specific Heat}\\
+          \cmidrule(lr){2-3} \cmidrule(lr){4-4}
+          Substance & {$\mathrm{cal/g \cdot K}$} & {$\mathrm{J/kg \cdot K}$} & {$\mathrm{J/mol \cdot K}$} \\\hline
+          \multicolumn{4}{l}{\itl{\ Elemental Solids}} \\ Lead     & 0.0305 & 128  & 26.5 \\ Tungsten & 0.0321 & 134  & 24.8 \\ Silver   & 0.0564 & 236  & 25.5 \\ \hly{Copper}   & 0.0923 & 386  & 24.5 \\ Aluminum & 0.215  & 900  & 24.4 \\ \hline
+          \multicolumn{4}{l}{\itl{\ Other Solids}} \\ Brass    & 0.092  & 380  & \\ Granite  & 0.19   & 790  & \\ Glass    & 0.20   & 840  & \\ \hly{Ice} (−10°C) & 0.530 & 2220 & \\ \hline
+          \multicolumn{4}{l}{\itl{\ Liquids}} \\ Mercury       & 0.033 & 140  & \\ Ethyl alcohol & 0.58  & 2430 & \\ Seawater      & 0.93  & 3900 & \\ \hly{Water}         & 1.00  & 4187}
+
+%% Tab. 변환열
+\DeclareTable
+  {some_heats_of_transformation}
+  {\someheatsoftransformation}
+  {Some Heats of Transformation}
+  {l S[table-format=4.1] S[table-format=3.1] S[table-format=4.1] S[table-format=4.0]}{
+          & \multicolumn{2}{c}{Melting} & \multicolumn{2}{c}{Boiling}  \\
+          \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+          & {Melting} & {Heat of} & {Boiling} & {Heat of} \\
+          & {Point} & {Fusion} & {Point} & {Vaporization} \\
+Substance & {($\mathrm{K}$)} & {$L_f\,(\mathrm{kJ/kg})$} & {($\mathrm{K}$)} & {$L_v\,(\mathrm{kJ/kg})$} \\
+\hline
+Hydrogen & 14.0  & 58.0  & 20.3   & 455  \\ Oxygen   & 54.8  & 13.9  & 90.2   & 213  \\ Mercury  & 234   & 11.4  & 630    & 296  \\ \hly{Water}    & 273   & 333   & 373    & 2256 \\ Lead     & 601   & 23.2  & 2027   & 858  \\ Silver   & 1235  & 105   & 2323   & 2336 \\ Copper   & 1356  & 207   & 2868   & 4730}
+
+%% Tab. 열역학 제1법칙: 네 가지 특별한 과정
+\DeclareTable
+  {the_first_law_of_thermodynamics}
+  {\thefirstlawofthermodynamics}
+  {The First Law of Thermodynamics: Four Special Cases}
+  {l >{$}r<{$}@{${}={}$}>{$}l<{$} >{$}r<{$}@{${}={}$}>{$}l<{$}}{
+  \multicolumn{5}{c}{\itl{The Law : } $\Delta E_{\mathrm{int}} = Q - W$ (\autoref{eq:first_law_of_thermodynamics})} \\\hline
+  Process & \multicolumn{2}{c}{Restriction} & \multicolumn{2}{c}{Consequence} \\\hline
+  Adiabatic       & Q & 0             & \Delta E_{\mathrm{int}} & -W \\
+  Constant volume & W & 0             & \Delta E_{\mathrm{int}} & Q  \\
+  Closed cycle    & \Delta E_{\mathrm{int}} & 0  & Q & W \\
+  Free expansion  & Q & W = 0 & \Delta E_{\mathrm{int}} & 0}
+% >{$}r<{$}: 수학 모드로 오른쪽 정렬
+% @{${}={}$}: 가운데 등호 출력 (간격 없이)
+% 두 쌍씩 반복해서 왼쪽=오른쪽 형태 정렬을 두 번 반복함
+
+
+%% Tab. 열전도도
+\DeclareTable
+  {some_thermal_conductivities}
+  {\somethermalconductivities}
+  {Some Thermal Conductivities}
+  {l S[table-format=3.3]}
+  {Substance & {$k\,(\mathrm{W/m \cdot K})$} \\\hline
+    \multicolumn{2}{l}{\itl{\ Metals}} \\ Stainless steel & 14 \\ Lead & 35 \\ Iron & 67 \\ Brass & 109 \\ Aluminum & 235 \\ Copper & 401 \\ Silver & 428 \\\hline
+    \multicolumn{2}{l}{\itl{\ Gases}} \\ Air (dry) & 0.026 \\ Helium & 0.15 \\ Hydrogen & 0.18 \\\hline
+    \multicolumn{2}{l}{\itl{\ Building Materials}} \\ Polyurethane foam & 0.024 \\ Rock wool & 0.043 \\ Fiberglass & 0.048 \\ White pine & 0.11 \\ Window glass & 1.0}%

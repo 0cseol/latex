@@ -1,0 +1,99 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{halliday2022}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=9d9a6552821ea504ab1a5c767dddff92}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8967f5a0664f741b0ef2530a47e698fa}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa8304879d8f7d99c7c4570759b948e2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Jearl},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhashraw}{3978689396696961b0bd612b55ccf075}
+      \strng{bibnamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorbibnamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authornamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhashraw}{3978689396696961b0bd612b55ccf075}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{11}
+      \field{isbn}{9781119773518}
+      \field{title}{Fundamentals of Physics}
+      \field{year}{2022}
+    \endentry
+    \entry{kim2021sigfig}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=234bc90840eade11e9ec99eea4c5bdaa}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sung-Jin},
+           giveni={S\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=77621ca3674ddd2592864b15f13c7798}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hyun-Woo},
+           giveni={H\bibinithyphendelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{fullhash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{fullhashraw}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{bibnamehash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{authorbibnamehash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{authornamehash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{authorfullhash}{c6745a2a8150d60846e2a4cfd93936a1}
+      \strng{authorfullhashraw}{c6745a2a8150d60846e2a4cfd93936a1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Science Education Research}
+      \field{number}{3}
+      \field{title}{Students’ Understanding and Application of Significant Figures in Physics Experiments}
+      \field{volume}{45}
+      \field{year}{2021}
+      \field{pages}{211\bibrangedash 230}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1234/jsr.2021.45.3.211
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

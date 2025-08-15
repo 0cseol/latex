@@ -1,0 +1,304 @@
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Temperature}
+\memo{chapter: 온도, 열, 열역학 제1법칙 \\ section: 온도}%
+\ 열역학(Thermodynamics)은 계(system)의 \seolfa{내부에너지}가 어떻게 되는지,
+그것이 어떻게 \seolfa{변화}하는지 연구하고 응용하는 분야이다.
+내부에너지란 무엇인가? 열이란 무엇인가? 온도는 무엇인가? 먼저 온도에 대해 먼저 알아보자.
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Temperature}
+\memo{sub: 온도}%
+\ 온도는 SI 기본 물리량이다. 과학은 \bd{Kelvin 척도}를 이용하여 온도를 나타내고,
+단위는 \bd{켈빈($\mathrm{K}$)}을 쓴다.
+물체의 온도는 한없이 올릴 수 있어도, 켈빈온도의 $0$인 \hly{\tsl{절대영도}} 아래로 내려갈 수 없다. \\
+\memo{영하 $10\,^\circ\mathrm{C}$의 \seolight{냉동실 안의 얼음} 온도는? \\
+영하 $10\,^\circ\mathrm{C}$의 바깥에서 \seolight{쇠막대와 수건}의 온도는 무엇이 더 높을까? \\
+둘다 같다. 냉동실 안의 두 물체인 것이다. \\
+쇠막대가 차갑다고 느끼는 이유는 열을 뺏길 때 춥다고 느끼기 때문이다. \\
+쇠막대는 수건보다 우리 몸에서 \seolight{열을 더 많이} 뺏어갈 수 있다. \\
+우리는 \seolight{열과 온도를 구분}할 수 있어야 한다. \\
+ \\
+Kelvin scale \\
+ \\
+독일 연구팀이 \seolight{2021.08.}에 절대영도에 가까운 냉각실험에 성공 발표함. \\
+1. 진공 상태로 용기에 루비듐 원자 가스 10만 개를 넣어 자석에 넣고
+\seolight{2나노켈빈}까지 온도를 낮추고 보스-아인슈타인 응축을 발생 \\
+2. 실험 설비를 120m \seolight{자유 낙하시켜 무중력} 상태로 하는 동시에
+진공 용기 속에 \seolight{자기 온오프를 전환} \\
+ - 자기장이 없어지면 가스는 팽창하고 자기장이 있으면 가스는 다시 수축 \\
+이를 빠르게 반복해 가스가 운동을 중지하고 온도를 효과적으로 감소,
+가스 온도를 \seolight{38피코켈빈}까지 낮추는 데 성공.}%
+
+%% Fig. 켈빈 척도로 나타낸 여러 온도
+\sometemperaturesontheKelvinscale
+\memo{Kelvin 척도로 나타낸 온도.
+$T = 0$은 $10^{-\infty}$에 해당하므로 주어진 \seolight{로그 눈금}에 표시할 수 없다. \\
+ \\
+우주 공간의 온도($3\,\mathrm{K}$)는 어떻게 측정하였을까? \\
+\seolight{우주배경복사} \\
+(CMB - Cosmic Microwave Background)를 이용한다. \\
+복사 공식을 사용함.}%
+\ \autoref{fig:some_temperatures_on_the_Kelvin_scale}\은 켈빈 척도로 나타낸 여러 온도이다.
+생성 직후 우주의 온도는 $10^{39}\,\mathrm{K}$이었고,
+팽창하며 현재 평균 온도는 $3\,\mathrm{K}$이다.
+\clearpage
+
+
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{The Zeroth Law of Thermodynamics}
+\memo{sub: 열역학 제0법칙}%
+\ 열역학 제0법칙은 물체의 \hly{\tsl{열평형}}을 기술한다.
+제1법칙과 제2법칙이 발견되고 이름이 붙여진 지 한참이 지난 후에 정립되었으나
+\hly{온도라는 개념}이 나머지 두 법칙의 기본이 되므로 논리적 순서에 따라 제0법칙으로 명명되었다.
+\begin{sssbox}
+$A$와 $B$는 서로 모르는 상태이다. \\
+$C$가 $A$에게 친구라고 인사하고, $B$에게도 친구라고 인사한다. \\
+그렇다면 $A$와 $B$는 서로가 친구임을 알 수 있다.
+\end{sssbox}
+
+%% Fig. 온도 측정 장치
+\thermoscope
+\memo{\seolight{검온기}. 소자가 가열되면 숫자가 늘어나고 냉각되면 줄어든다. 온도 감지부는 여러 가지 특성을
+이용할 수 있는데, 예를 들어 도선의 \seolight{전기저항을 측정}하여 숫자로 표시할 수 있다. \\
+ \\
+\seolight{센서} 는 것은 보통 특정 상황에서 \seolight{전기적 저항이 달라지는 것}을 이용한다. \\
+압력은 스트레인게이지, 빛은 황화카드뮴(CdS) 등}%
+\ 검온기(\autoref{fig:thermoscope})\은 온도 측정 장치를 의미한다.
+온도에 따라 물리적 특성이 달라지면, 이를 숫자로 표시할 수 있다.
+이 숫자가 \hly{온도를 의미하는 것은 아직 아니다}.
+
+%% Fig. 열역학 제0법칙
+\zerothlawofthermodynamicsdiagram
+\memo{(a) 물체 $T$(검온기)와 물체 $A$가 \seolight{열평형}을 이룬다 (칸막이 $S$는 절연막이다).
+(b) 물체 $T$와 물체 $B$ \seolight{또한 열평형}을 이루고 표시된 \seolight{숫자가 같다}.
+(c) (a)와 (b)가 참이라면 열역학 제0법칙에 의해 물체 \seolight{$A$와 물체 $B$도 열평형}을 이룬다.}%
+\ \autoref{fig:zeroth_law_of_thermodynamics_diagram}\은 열역학 제0법칙을 나타낸다.
+
+\begin{graybox}
+단열 상자 속에서 \\
+\memo{\seolight{열은 이동}이다. \seolight{열평형}이라고 하면 이동이 없다는 것이다. \\
+열에 대해서는 뒤에서 계속해서 다시 다룰 것이다.}%
+\bnset
+\begin{tabular}{@{}l@{~~}c@{~~}l@{}}
+\bn 검온기 $T$를 $A$에 접촉 & $\longrightarrow$ & 더 이상 검온기 눈금 변하지 않음 \\
+                            & $\longrightarrow$ & \seolfa{열평형} 상태이고, $T$와 $A$의 온도는 같다. \\
+\bn 검온기 $T$를 $B$에 접촉 & $\longrightarrow$ & 더 이상 검온기 눈금 변하지 않음 \\
+                            & $\longrightarrow$ & \seolfa{열평형} 상태이고, $T$와 $B$의 온도는 같다.
+\end{tabular} \\
+\bn 위의 두 경우 $T$에 표시된 숫자가 같다면 $A$와 $B$의 온도는 \seolfa{같다.} \\
+\bn $A$와 $B$를 접촉시키면 \seolfa{열평형}을 이룬다.
+\end{graybox}
+\clearpage
+
+
+
+\begin{graybox}
+물체 $A$와 $B$가 다른 물체 $T$와 \hly{각각 열평형}을 이룬다면 \hly{$A$와 $B$도 열평형}을 이룬다.
+\end{graybox}
+
+\ 모든 물체는 \hly{온도라는 특성}을 가지며,
+두 물체가 \hly{열평형} 상태에 있으면 둘의 \hly{온도는 같다}. 또한 그 역도 성립한다.
+그렇다면, \seolight{검온기의 숫자는 무엇을 의미}하는가?
+
+\begin{sssbox}
+\ 검온기의 숫자가 변하는 것은 분명 온도와 관련이 있다.
+온도에 따라 일관성 있게 변하지만 그 값은 \seolight{아직 과학적으로 의미가 없다.}
+나의 검온기의 값이 140인데 친구의 검온기가 200일 수도 있는 것이다.
+우리는 같은 온도 상태에서 두 값이 같게 되도록 \seolight{`보정'}할 필요가 있다.
+이러한 \seolight{의미 있는 척도(scale)}는 여러 사람이 제안하였고,
+설씨가 제안한 온도는 `설씨온도', 섭씨가 제안한 온도는 `섭씨온도'라고 불렀다.
+\hly{\itl{Celsius}}가 제안한 온도는 섭씨온도이고,
+\hly{\itl{Fahrenheit}}가 제안한 온도는 화씨온도이다. \\
+\memo{외국 인명을 중국어 한자로 음역한 방식으로
+19세기 말부터 서양 용어가 동아시아로 들어올 때 만들어짐 \\
+ \\
+섭씨는 \seolight{섭이우사} \\
+화씨는 \seolight{화륜해} \\
+뉴턴은 \seolight{뉴둔}으로 음차함}%
+
+\ 여기에서 재미있는 문제가 발생한다. 정해진 약속대로 같은 온도에서 같은 숫자를 쓰는데,
+\seolight{`마이너스 온도'}가 생긴다는 것이다.(\seolight{물리적으로 의미}가 있는가?) \\
+
+\ 어두움은 빛이 조금 있는 상태이고, 추움은 온도가 낮을 뿐 0보다 큰 값을 갖는다.
+즉, 0은 없음이고 값은 \hly{언제나 양수를 가져야 한다}. \\
+
+\ 이러한 이유로 \seolight{절대 0도를 기준}으로 물리적 의미를 담은 온도를
+\hly{`절대온도'}라고 한다.
+우리는 물리현상을 \seolight{절대온도를 이용하여 기술}할 것이다.
+\end{sssbox}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Measuring Temperature}
+\memo{sub: 온도의 측정}%
+\ Kelvin 척도로 온도를 어떻게 정의하는지 확인해 보자.
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{The Triple Point of Water}
+\memo{subsub: 물의 삼중점}%
+\ 온도의 눈금을 정하기 위하여 기준이 될 \hly{재현 가능한 열적 현상}이 필요하다.
+이를 \tsl{표준 고정점}(\itl{standard fixed point})이라고 하며,
+Kelvin 척도에서 \seolfa{물의 삼중점}을 기준으로 한다.\\
+\memo{물의 끓는점, 어는점 등 \seolight{다양한 선택지}가 있으나
+물, 얼음, 수증기가 \seolight{열적 평형상태에서 공존}할 때
+\seolight{압력과 온도가 유일한} 값인 \seolight{삼중점}을 택한다. 대략 섭씨 0도이다.}%
+
+%% Fig. 삼중점 기구
+\triplepointcell
+\memo{삼중점 기구. 고체 상태인 얼음, 액체 상태인 물, 기체 상태인 수증기가 열적 평형상태에서 \seolight{공존}한다.
+국제 협약에 따라 혼합물의 온도를 \seolight{$273.16\,\mathrm{K}$으로 정의}한다.
+기체온도계는 삼중점 기구의 파인 곳에 끼워져 있다.}%
+\ 삼중점 기구(\autoref{fig:triple-point_cell})는 실험실에서 물의 삼중점을 구현할 수 있게 한다.
+\clearpage
+
+
+
+\ 국제 협약에 따라 물의 삼중점 온도를 \seolight{$273.16\,\mathrm{K}$으로 약속}하고,
+이 온도를 \seolight{표준 고정점 온도}로 한다.
+\begin{equation} T_{3} = 273.16\,\mathrm{K} ~~~~~ \text{(triple-point temperature)} \end{equation}
+
+\ \seolight{아래 첨자 3}은 삼중점을 뜻하고, \hly{1켈빈의 크기}는 절대영도와 물의 삼중점 온도 차이의
+\seolight{$1/273.16$}에 해당한다. 정도를 나타내는 $^\circ$ 기호를 쓰지 않고 $\mathrm{K}$만 단독으로 쓴다.
+\seolight{온도 자체를 $\mathrm{K}$}로 표시하고, \seolight{온도차도 $\mathrm{K}$}로 표시한다.
+
+\begin{sssbox}
+\ 왜 하필 $273.16\,\mathrm{K}$으로 정의하는가? 그 이유는 \seolfa{섭씨온도}와 눈금 간격을 같이 하기 위함이다.
+섭씨온도를 기준으로 삼중점은 $0.01\,^\circ\mathrm{C}$이고, 절대 영도는 $-273.15\,^\circ\mathrm{C}$이다.
+1도 간격의 차이가 절대온도와 섭씨온도가 같다는 것은,
+\seolight{온도 차이}를 기술할 때 절대온도, 섭씨온도 중 \seolight{어떤 것을 써도 상관없다}는 것을 의미한다.
+\end{sssbox}
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{The Constant-Volume Gas Thermometer}
+\memo{subsub: 일정부피 기체온도계}%
+\ 표준온도계는 일정 부피를 유지하는 기체의 압력을 이용한다.
+
+%% Fig. 일정부피 기체온도계
+\constantvolumegasthermometer
+\memo{일정부피 기체온도계. 기체 용기에 측정하고자 하는 온도 $T$의 액체가 담겨있다. \\
+\\
+\seolight{보통 오른쪽 $h$ 만큼 더 높은 그림이 많은데} 이거 그림 헷갈림..
+대기압보다 작아서 빨려 들어간 형태이고, h가 더 높다고 생각하면 1차원적으로 생각할 수 있음.
+\seolight{온도가 높아지면 수은을 밀고 나온다}. 이때 수은 용기를 \seolight{올리면}, 다시 눈금이 0에 맞는다.
+기체의 부피는 일정하게 한 상태로 새롭게 바뀐 $h$로 압력을 구할 수 있다.}%
+\ \hly{일정부피 기체온도계}(\autoref{fig:constant-volume_gas_thermometer})는 기체가 채워진 용기가
+수은 압력계에 연결되어 있는 형태이다.
+\seolight{수은을 담은 용기 $R$을 올리거나 내리면서} U자형 관의 왼쪽 부분의 수은 높이를 눈금의 $0$에 맞추어
+기체의 부피를 일정하게 만들 수 있다.
+
+\begin{sssbox}
+\ 온도가 높아지면, 기체가 \seolfa{팽창}하려고 한다. 이때,
+팽창하지 못하도록(원래의 \hly{부피를 유지}하도록) \seolfa{압력}을 가하는 원리이다. \\
+
+\bul 유리병의 입구를 손으로 막고 있는데 기체가 팽창하려는 \seolight{압력이 손에 느껴진다}. \\
+\bul 기체가 \seolight{팽창하지 못하도록} 더 강한 압력으로 입구를 막는다. \\
+\bul 이 \seolight{압력의 정도를 측정}하면 기체의 온도를 알아낼 수 있다. \\
+
+일정 압력을 유지하는 것보다 일정 \seolight{부피를 유지하는 방법이 더 쉬워} 널리 사용된다.
+\end{sssbox}
+\clearpage
+
+
+
+\ 기체 용기와 접촉하는 물체(\autoref{fig:constant-volume_gas_thermometer}에서 용기를 둘러싼 액체)의
+온도 $T$는 기체에 가해진 압력 $p$와 \seolight{비례 상수 $C$}를 이용하면 다음과 같이 나타낼 수 있다.
+
+\begin{equation} T = Cp
+\label{eq:T_Cp}\end{equation}
+
+\ \seolight{계기 압력} $p_g$에 관한 식(\autoref{eq:gauge_pressure})에 의해 압력 $p$를 다음과 같이 정리할 수 있다.
+
+\begin{equation} p=p_{0}-\rho gh \end{equation}
+
+\memo{\seolight{열린 관 압력계의 계기 압력}(\autoref{eq:gauge_pressure}) \\
+$p_g = p - p_0 = \rho g h$에서 \seolight{주어진 예시와 $h$가 반대}임.
+압력이 \seolight{대기압보다 작기 때문에 수은이 빨려 들어간} 형태 \\
+압력이 $p_0$인 곳을 기준으로 측정하므로 부호가 음이다. \\
+ \\
+atm : atmospheric pressure}%
+\ 여기서 $p_0$는 대기압이고, $p$는 압력계 안 수은의 밀도, $h$는 관의 양쪽 수은 기둥 높이의 차이이다.
+앞 장에서 다룬 것처럼 압력의 SI 단위는 제곱미터당 뉴턴인 \hly{\bd{파스칼($\mathrm{Pa}$)}}을 쓴다.
+1기압은 \hly{$1\,\mathrm{atm}$}으로 나타낸다. \\
+\begin{equation*} 1\,\mathrm{atm} = 1.01 \times 10^5\,\mathrm{Pa} = 760\,\mathrm{torr} = 14.7\,\mathrm{lb/in^2} \end{equation*}
+
+\memo{1기압은 \seolight{10만 파스칼}이다. \seolight{$101,325\,\mathrm{Pa}$}}%
+\ 일정부피 기체온도계의 기체 용기를 삼중점 기구(\autoref{fig:triple-point_cell})에 넣고, 압력을 $p_3$라고 하면
+온도를 다음과 같이 나타낼 수 있다.
+
+\begin{equation} T_{3} = Cp_{3}
+\label{eq:T3_Cp3}\end{equation}
+
+\ \autoref{eq:T_Cp}\와 \autoref{eq:T3_Cp3}\을 연립하여 상수 $C$를 제거하면 잠정적인 식은 다음과 같다. \\
+\memo{아직 \seolight{이론적으로 완전히 증명되거나 일반화된 식은 아니지만},
+현재 상황이나 실험 결과에 \seolight{일시적}으로 적용하거나 \seolight{근사적}으로 사용하는 식 \\
+ \\
+삼중점 온도는 국제 협약에 따라 $273.16\,\mathrm{K}$으로 정의하였음.}%
+%% eq. 잠정적인 이상기체 온도
+\begin{equation} T = T_{3} \left( \frac{p}{p_{3}} \right) = \left( 273.16\,\mathrm{K} \right) \left( \frac{p}{p_{3}} \right) ~~~~~ \text{(provisional)}
+\label{eq:provisional_ideal_gas_temperature}\end{equation}
+
+\ 그러나 위의 방식은 같은 온도를 측정하더라도 \seolight{기체의 종류가 바뀔 때마다}
+결과가 조금씩 달라지는 문제가 생긴다.
+이러한 문제를 개선하기 위하여 용기를 채우는 \hly{기체의 양을 점점 줄여나간다}.
+기체의 양이 점점 줄어들면 어떤 기체를 사용하더라도 \hly{하나의 온도에 수렴}하게 된다.
+
+%% Fig. 고정 부피 기체 온도계로 측정한 온도
+\temperaturesmeasuredbyaconstantvolumegasthermometer
+\memo{기체 용기를 \seolight{끓는 물에 담갔을 때} 일정부피 기체온도계로 측정한 온도.
+\autoref{eq:provisional_ideal_gas_temperature}로 온도를 계산할 때 압력 \seolight{$p_3$은
+물의 삼중점에서 측정}하였다. 온도계의 기체 용기에 담긴 \seolight{기체가 다르면}
+압력이 바뀔 때 \seolight{일반적으로 다른 결과}를 얻지만 기체의 양이 줄어들면
+(\seolight{즉, $p_3$가 감소하면})
+\seolight{모든 결과는 $373.125\,\mathrm{K}$으로 수렴}한다.}%
+\ \autoref{fig:temperatures_measured_by_a_constant-volume_gas_thermometer}\은
+세 가지 기체를 이용하여 끓는 물의 온도를 측정할 시
+기체를 줄여나갈 때 하나의 온도($373.125\,\mathrm{K}$)에 \seolight{수렴}하는 것을 보여준다.
+\clearpage
+
+
+
+\ 따라서 이상기체 온도계를 이용해 온도를 정의하는 식은 다음과 같다.
+
+%% eq box. 미지 온도 측정 식
+\begin{eqbox} T = (273.16\,\mathrm{K}) \left( \lim_{\seolight{\text{gas}\,\to\,0}}\frac{p}{p_{3}} \right)
+\label{eq:ideal_gas_temperature} \end{eqbox}
+
+\ 정리하면 미지의 온도 $T$를 측정하는 방법은 다음과 같다.
+\begin{graybox}
+\bnset
+\bn 온도계에 일정량의 기체를 채운 후 \seolight{삼중점 용기}를 사용하여 \seolfa{$p_3$}를 측정 \\
+\bn 기체의 \seolight{부피를 일정}하게 하면서 측정하고 싶은 온도에서 기체의 압력 $p$를 측정 \\
+\bn \seolfa{$p/p_3$}를 계산 \\
+\bn 기체 용기 안의 기체 \seolight{부피를 점점 줄여}나가면서 같은 측정을 반복 \\
+\bns $\longrightarrow$ 그때마다 \seolfa{$p/p_3$}를 계산 \\
+\bn \seolight{기체가 거의 없다고 볼 수 있는 경우}의 \seolfa{$p/p_3$}를 추정 \\
+\bn 이 비율을 미지 온도 측정 식(\autoref{eq:ideal_gas_temperature})에 대입하여 온도 $T$를 계산 \\
+\bns $\longrightarrow$ 이 온도를 \hly{\tsl{이상기체 온도}(\itl{ideal gas temperature})}라고 한다.
+\end{graybox}
+
+\begin{checkbox}
+For four gas samples, here are the pressure of the gas at temperature $T$
+and the pressure of the gas at the triple point.
+Rank the samples according to $T$, greatest first. \\\vspace{-12pt}%
+\memo{네 기체 시료에 대해 온도 \seolight{$T$에서 기체의 압력}과
+\seolight{삼중점에서 기체의 압력}을 나타내었다.
+시료를 $T$가 큰 것부터 나열하여라.}%
+\tab{}{}{c c c}{
+Sample & Pressure ($\mathrm{kPa}$) & Triple-Point Pressure ($\mathrm{kPa}$) \\ \hline
+1 & 2.6 & 2.0 \\ 2 & 4.8 & 4.0 \\ 3 & 5.5 & 5.0 \\ 4 & 7.2 & 6.0}
+\vspace{0pt}%
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn 기체 용기 속의 \solight{기체가 거의 없다고 가정}하자. \\
+\bns (어느 하나가 많고, 적으면 비율이 달라지므로 제한 조건이 엄밀해야 함. \\
+\bns 가정이 아니라 문제 조건으로 주어졌어야 함.) \\
+\memo{책에서도 잠정적인 식 이후에 정의식에 limit까지 해놓고..
+왜 문제에서 조건으로 안 쓰는지...}%
+\bn \solight{$p/p_3$를 계산}하면 순서대로 1.3, 1.2, 1.1, 1.2이다. \\
+\bn 여기에 \solight{$273.16\,\mathrm{K}$을 곱한} 값이 온도가 된다. \\
+\bd{Ans: } $1 > 2 = 4 > 3$
+\end{solbox}
+\clearpage

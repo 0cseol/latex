@@ -1,0 +1,195 @@
+%% 표 스타일 정의용 매크로
+
+%% 필요 패키지
+\usepackage{array}        % 열 정렬 커스터마이징
+\usepackage{booktabs}     % \toprule, \midrule, \bottomrule
+\usepackage{multirow}     % 셀 병합
+\usepackage{colortbl}     % 셀 색칠
+\usepackage{longtable}    % 페이지 넘기는 긴 표
+\usepackage{tabularx}     % 자동 너비 조절
+\usepackage{xcolor}       % 색상 정의
+
+%% 자주 쓰는 열 정의
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}   % 가운데 정렬 고정폭 열
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % 왼쪽 정렬 고정폭 열
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}  % 오른쪽 정렬 고정폭 열
+
+%% 기본 테이블 여백 조정
+\setlength{\tabcolsep}{8pt}  % 셀 좌우 간격
+\renewcommand{\arraystretch}{1.2}  % 행 간격
+
+%% 강조 셀 스타일 - 기존에 정의한 색 재사용 (이미 \definecolor 되어 있어야 함)
+\newcommand{\graycell}[1]{\cellcolor{mygray!20}#1}   % 회색 강조 셀
+\newcommand{\redcell}[1]{\cellcolor{myred!20}#1}     % 빨간 강조 셀
+\newcommand{\bluecell}[1]{\cellcolor{myblue!20}#1}   % 파란 강조 셀
+
+
+%%%%% 표
+
+%% 표 내에서 정렬이 편하도록 함수 명명
+\newcommand{\leftcell}[1]{\raggedright #1\arraybackslash}
+\newcommand{\centercell}[1]{\centering #1\arraybackslash}
+\newcommand{\rightcell}[1]{\raggedleft #1\arraybackslash}
+
+% \tab[h]{캡션}{라벨}{정렬}{내용} - 내용 빼고 모두 생략 가능
+\newcommand{\tab}[5][H]{ % 기본 위치 here. 무조건 강하게 H
+  \begin{table}[#1] % 표 float 환경 시작, 위에서 H로 지정함. 안써도 됨
+    \vspace{-3pt} % 표 위로 살짝 올리기
+    \centering % 표 가운데 정렬
+    \ifthenelse{\isempty{#2}}{}{ % 캡션 내용 비어있으면 생략
+      \caption{#2} % 캡션이 비어 있지 않으면 삽입. tabular 아래에 넣으면 캡션은 아래로 감
+    }
+    \ifthenelse{\isempty{#3}}{}{%
+      \label{tab:#3} % 라벨이 비어 있지 않으면 tab: 접두사와 함께 삽입
+    }
+    \begin{tabular}{#4} % 표 열 형식 지정
+      \hline
+      #5 \\ % 표 내용
+      \hline
+    \end{tabular}
+    \vspace{-1em} % 표 아래 여백 강제로 줄이기
+  \end{table}
+}
+
+%% table 선언 쉽도록 함수 작성 - \DeclareTable{라벨}{명령이름}{캡션}{열형식}{내용} 순으로 입력하면 됨
+\newcommand{\DeclareTable}[5]{
+  \newcommand{#2}{
+    \begin{table}[H]
+      \vspace{-2pt}
+      \centering
+      \ifstrempty{#3}{}{%
+        \caption{#3}
+      }
+      \ifstrempty{#1}{}{%
+        \label{tab:#1}
+      }
+      \begin{tabular}{#4}
+        \hline
+        #5 \\
+        \hline
+      \end{tabular}
+      \vspace{-1em}
+    \end{table}
+  }
+}
+
+%%%%% 그림
+%% 본래 그림을 다음과 같이 선언해야 함
+% \newcommand{\kelvintemperatures}{ - 명령 이름 작성
+%     \begin{figure}[h] \centering \includegraphics[scale=0.6]
+%     {../figures/kelvin_temperatures} - 파일 경로(파일명)
+%     \caption{Some temperatures on the Kelvin scale} - 캡션(파일명과 동일)
+%     \label{fig:kelvin_temperatures} \end{figure} } - 라벨
+% 여기에, 기본 0.6배로 하지만 추가로 크기 지정할 수 있도록 함
+
+%% figure 선언 쉽도록 함수 작성 - \DeclareFigure{파일명(라벨)}{명령이름}{캡션} 순으로 입력하면 됨
+\renewcommand{\figurename}{Fig.} % 전역적으로 그림을 Figure가 아닌 Fig.로 말하게 함
+\newcommand{\DeclareFigure}[3]{%
+  \NewDocumentCommand{#2}{g}{%
+    \begin{figure}[H] \centering
+      \IfNoValueTF{##1}
+        {\includegraphics[scale=0.6]{figures/#1}} % 기본사이즈 0.6
+        {\includegraphics[scale=##1]{figures/#1}} % 사이즈 지정 가능
+      \caption{#3}
+      \label{fig:#1} % 파일명과 라벨명 일치시킴
+    \end{figure}}}
+
+%% figure* - 번호, 라벨 없음
+\newcommand{\DeclareFigureNoTag}[3]{
+  \NewDocumentCommand{#2}{g}{%
+    \begin{figure}[H] \centering
+      \IfNoValueTF{##1}
+        {\includegraphics[scale=0.6]{figures/#1}} % 기본사이즈 0.6
+        {\includegraphics[scale=##1]{figures/#1}} % 사이즈 지정 가능
+      \caption{#3}
+    \end{figure*}}}
+
+%% figure 2개짜리 함수 작성(파일명은 같고_a, _b만 달라야 함) - \DeclareDoubleFigure{파일명(라벨)}{명령이름}{캡션} 순으로 입력하면 됨
+\newcommand{\DeclareDoubleFigure}[3]{
+  \newcommand{#2}{
+    \begin{figure}[H] \centering
+      \begin{subfigure}[b]{0.3\textwidth} % bottm으로 정렬(t,c 가능), 폭 지정 0.3
+        \includegraphics[scale=0.6]{figures/#1_a} \caption{} % a, b, c 순차적으로 캡션 붙음
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.6]{figures/#1_b} \caption{}
+      \end{subfigure}
+      \caption{#3}
+      \label{fig:#1}
+    \end{figure}}}
+
+%% figure 3개짜리 함수 작성(파일명은 같고_a, _b, _c만 달라야 함) - \DeclareTripleFigure{파일명(라벨)}{명령이름}{캡션} 순으로 입력하면 됨
+\newcommand{\DeclareTripleFigure}[3]{
+  \newcommand{#2}{
+    \begin{figure}[H] \centering
+      \begin{subfigure}[b]{0.3\textwidth} % bottm으로 정렬(t,c 가능), 폭 지정 0.3
+        \includegraphics[scale=0.56]{figures/#1_a} \caption{} % a, b, c 순차적으로 캡션 붙음
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_b} \caption{}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_c} \caption{}
+      \end{subfigure}
+      \caption{#3}
+      \label{fig:#1}
+    \end{figure}}}
+
+%% figure 6개짜리 함수 작성 (파일명은 같고 _a ~ _f까지 순차적으로, 3개씩 2줄 배치)
+%% 사용법: \DeclareQuadFigure{파일명(라벨)}{명령이름}{캡션}
+
+\newcommand{\DeclareQuadFigure}[3]{%
+  \newcommand{#2}{%
+    \begin{figure}[H] \centering
+      \begin{subfigure}[b]{0.3\textwidth} % 첫 번째 줄: a, b, c
+        \includegraphics[scale=0.56]{figures/#1_a} \caption{}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_b} \caption{}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_c} \caption{}
+      \end{subfigure}
+      \par\medskip % 줄바꿈 + 여백
+      \begin{subfigure}[b]{0.3\textwidth} % 두 번째 줄: d, e, f
+        \includegraphics[scale=0.56]{figures/#1_d} \caption{}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_e} \caption{}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[scale=0.56]{figures/#1_f} \caption{}
+      \end{subfigure}
+      \caption{#3}
+      \label{fig:#1}
+    \end{figure}}}
+
+
+
+
+
+
+
+
+
+
+
+%% checkbox 그림처럼 라벨 없이 간단하게 삽입하는 경우
+% \quickfig{파일명}으로 부를 수 있음.
+% 기본 0.6배 크기지만 \qickfig[0.4]{파일명} 이런식으로 사이즈 변경 가능
+\NewDocumentCommand{\quickfig}{O{0.6} m}{%
+  \begin{center}
+    \includegraphics[scale=#1]{figures/#2}
+  \end{center}
+}
+
+% 교사용 seolfig - 모드 3,4일때만 나오는 그림. 1,2에서는 자리만 차지
+\NewDocumentCommand{\seolfig}{O{0.6} m}{%
+  \begin{center}
+    \ifnum\seolfmode>2
+      \includegraphics[scale=#1]{figures/#2}%
+    \else
+      \phantom{\includegraphics[scale=#1]{figures/#2}}%
+    \fi
+  \end{center}
+}

@@ -1,0 +1,501 @@
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Absorption of Heat}
+\memo{section: 열흡수}%
+\ \tsl{\hly{열}}은 계와 주위 사이 \hly{온도 차이} 때문에 \hly{전달되는 에너지}이다.
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Temperature and Heat}
+\memo{sub: 온도와 열}%
+\ 앞에서 다룬 \hly{열평형}은 두 계의 온도가 같아짐을 설명하였다.
+조금 더 정교하게 이를 다루면 다음과 같다.
+\begin{graybox}
+\bnset
+\bn 방 안에 음료가 있다. \hly{음료를 기준으로 설명}하고 싶다면, \\
+\bns \tsl{계}(\itl{System})가 \tsl{외부}(\itl{Environment})에 놓여 있다고 표현할 수 있다. \\
+\bns 음료의 온도를 $T_S$, 외부의 온도를 $T_E$라고 하자. \\
+\bn 최초에 $T_S$와 $T_E$가 \seolight{같지 않다면}, 두 온도는 변화하여 \seolfa{열평형}을 이룬다.
+\bns 이러한 온도 변화는 계와 주위 사이에 \seolfa{열에너지}가 전달된 결과이다. \\
+\bn \hly{열에너지}는 원자나 분자 같은 미시입자의 막운동과 관련된 \seolfa{운동에너지}와 \\
+\bns \seolight{퍼텐셜에너지}로 이루어진 \seolfa{내부에너지}이다.
+이렇게 전달되는 방식을 \\
+\bns \seolfa{열}이라고 하고, 크기를 \seolfa{열량}이라고 한다. 기호는 \seolfa{$Q$}이다. \\
+\bn 열이 \hly{양의 값}을 갖는다는 것은 계가 열을 \seolfa{흡수}한다는 뜻이다. \\
+\bns 열이 \hly{음의 값}을 갖는다는 것은 계가 열을 \seolfa{방출}한다는 뜻이다. \\
+\vspace{-12pt}%
+\memo{\seolight{부호에 대한 약속}이라고 생각할 수 있다. \\
+누가 어떻게 하느냐를 양 또는 음으로 약속하는 것이다. \\
+열을 어떻게 약속하는지 살펴보자. \\
+ \\
+\seolight{(위키백과 출처)} \\
+\seolight{열}은 \seolight{일}처럼 
+계에서 다른 계로 \seolight{에너지가 전달되는 방식} 중 하나이다. \\
+ \\
+\seolight{열}을 받으면 \seolight{일을 하거나} \seolight{내부에너지}가 늘어난다. \\
+이때의 내부에너지를 \seolight{열에너지}라고도 한다. \\
+열에너지는 내부에너지의 열적 부분이다.
+ \\
+\seolight{열에너지}는 물체가 가진 \seolight{내부에너지 중 열적 부분}이고 \\
+\seolight{열}은 상태를 나타내지 않고
+경로에 의존하는 \seolight{에너지 전달량이다}. \\
+그래서 \seolight{차원은 에너지로 같다}. \\
+ \\
+물체는 \seolight{내부에너지로써 열에너지}는 가질 수 있지만
+\seolight{열을 가질수는 없다}.
+따라서 열에너지보다 \seolight{내부에너지라는 용어가 더 많이 사용}된다.
+열은 전도, 대류, 복사로 전달된다. \\
+ \\
+정리하자면, 열 \seolight{$Q$는 전달량}, \\ 내부에너지 \seolight{$U$는 저장량}이다. \\
+열에너지는 \seolight{내부에너지의 열적 부분}이다. \\
+\seolight{차원은 모두 에너지}이다. \\
+ \\
+엄밀하게 지키면 좋지만, 의미 전달되는 선에서 사용하도록 하자.}%
+\end{graybox}
+
+\begin{sssbox}
+\bnset
+\bn 내부에너지는 계의 질량중심에 대해 정지해 있는 기준틀에서 볼 때 \\
+\bns 계의 미시적 구성 성분(원자와 분자)들이 갖는 모든 에너지를 의미한다. \\
+\bn 내부에너지는 내부 원자간 퍼텐셜에너지를 포함한 각 요소들의 에너지 합이다.
+\vspace{-4pt}
+\begin{align*} \hly{\text{내부에너지}} = ~ &\text{분자력에 의한 위치에너지} + \text{분자의 병진 운동 에너지} \\
+&+ \text{회전 운동에너지} + \text{분자 내 원자들의 진동 에너지} \end{align*}
+\bn 중력 퍼텐셜에너지, 전체 계의 운동에너지는 내부에너지가 아니다.
+\end{sssbox}
+
+%% Fig. 온도와 열
+\temperatureandheat
+\memo{계의 온도가 (a)처럼 주위 온도보다 높다면 \seolight{(b)의 열평형}에 도달될 때까지
+열 $Q$가 계에서 주위로 방출된다. (c) 계의 온도가 주위의 온도보다 낮다면
+\seolight{열평형에 도달될 때까지} 계가 열을 흡수한다.}%
+\ \autoref{fig:temperature_and_heat}\은 열과 온도에 대한 위의 설명을 나타낸 그림이다.
+\addlines{2}
+\begin{graybox}
+(a) $T_S > T_E$이므로 계는 열로 에너지를 ( 얻는다 / \solight{잃는다} ). \\
+\bns 즉, $Q$는 ( 양수 / \solight{음수} )이다. \\
+(b) $T_S = T_E$이므로, 열에너지의 전달이 없고, $Q = $ \seolfa{$0$}이다. \\
+(c) $T_S < T_E$이므로 계는 열로 에너지를 ( \solight{얻는다} / 잃는다 ). \\
+\bns 즉, $Q$는 ( \solight{양수} / 음수 )이다. \\
+\bul 열은 계와 주위 온도 \seolfb{차이에 따라 계와 주위 사이 전달되는 에너지 전달량이다.}
+\end{graybox}
+\clearpage
+
+
+
+\ 한편 계에 에너지가 전달되는 방법으로 계에 작용하는 힘이 한 일 $W$가 있다.
+열과 일은 물체가 가진 물리량이 아니다.
+물체가 일이나 열을 받고나면 더이상 `일'이나 `열'이라고 부르지 않는다.
+\hly{열과 일}은 어떠한 계에서 다른 계로 에너지가 \seolfa{전달될 때}만 의미가 있다.
+
+\memo{\seolight{교재의 비유: `송금'}이라는 말은 돈이 움직일 때만 의미가 있다.
+이는 계좌에 얼마가 있다는 의미가 아니다.
+계좌에는 돈이 있지 송금이 있는 것이 아니다. \\
+ \\
+\seolight{British thermal unit} \\
+\seolight{1파운드($\mathrm{lb}$)} 물을 \seolight{$63\,^\circ\mathrm{F}$}에서
+\seolight{$64\,^\circ\mathrm{F}$}까지 올리는 데 필요한 열 \\
+(\seolight{$0.45\,\mathrm{kg}$} 물을 \seolight{$17.22\,^\circ\mathrm{C}$}에서 \seolight{$17.78\,^\circ\mathrm{C}$}으로) \\
+ \\
+한편, \seolight{열의 일당량}의 국제적 합의는 \seolight{184}임. \\
+역사적 실험적으로는 \seolight{1868} \\
+ \\
+\seolight{$1\,\mathrm{cal} = 4.184\,\mathrm{J}$},
+\seolight{$1\,\mathrm{J} = 0.239\,\mathrm{cal}$} \\
+물의 비열은 일정하지 않기 때문에, \\
+(처음 온도에 따라 1도 올리는 데 필요한 에너지 다름) 초기, 최종값에 따라 다를 수 있음.
+비열은 바로 아래에서 다룸}%
+\ 열의 단위 중 줄($\mathrm{J}$), 칼로리($\mathrm{cal}$),
+영국열단위(Btu)의 관계는 다음과 같다.
+\begin{equation} 1\,\mathrm{cal} = 3.968 \times 10^{-3}\,\mathrm{Btu} = 4.1868\,\mathrm{J} \end{equation}
+
+\ \hly{칼로리($\mathrm{cal}$)}는 물 \hly{$1\,\mathrm{g}$}을
+\hly{$14.5\,^\circ\mathrm{C}$}에서 \hly{$15.5\,^\circ\mathrm{C}$}로 올리는 데 필요한
+열로 정의하였다.
+열도 일과 마찬가지로 SI 단위를 에너지 단위인 \hly{줄($\mathrm{J}$)}로 결정하였다.
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{The Absorption of Heat by Solids and Liquids}
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Heat Capacity}
+\memo{sub: 고체와 액체의 열흡수 \\ subsub: 열용량}%
+\ 물체가 흡수하거나 방출하는 열 $Q$와 물체의 온도 변화 $\Delta T$는 비례한다.
+이때, \seolight{비례상수 $C$}를 사용하여 다음과 같이 나타낼 수 있다.
+
+%% eq box. 열용량
+\begin{eqbox} Q = C \Delta T = C (T_f - T_i)
+\label{eq:heat_capacity} \end{eqbox}
+
+\ 여기서 비례상수 $C$는 물체마다 다르며, 다음의 지표가 된다.
+\begin{sssbox}
+\bul 이 물체의 \hly{온도변화($\Delta T$)}를 일으키려면 \hly{열($Q$)이 얼마나} 필요할까? \\
+\bul 이만큼의 \hly{열($Q$)}로 이 물체의 \hly{온도를 얼마나($\Delta T$)} 올릴 수 있을까? \\
+\bul 두 물체가 있을 때, 동일한 열로 어떤 물체의 온도를 더 올릴 수 있을까?
+\end{sssbox}
+
+\ 비례상수 $C$를 \hly{\bd{열용량}}이라고 한다.
+차원을 분석하면 열용량의 단위는 \seolfa{$\mathrm{J/K}$}이다.
+절대온도의 눈금 간격과 섭씨온도의 눈금 간격이 같으므로
+\seolfa{$\mathrm{cal/^\circ\mathrm{C}}$}의 단위를 사용할 수도 있다.
+
+\begin{sssbox}
+\bul 물체 $A$가 $B$보다 열용량이 크다. 즉, $C_A > C_B $이다. \\
+\bul $T_1$에서 $T_2$까지 온도를 변화시킬 때 \seolight{더 많은 열}을 가해야 하는 물체는?
+\seolfb{$A$} \\
+\bul \seolight{동일한 열}을 가했을 때 \seolight{온도 변화가 더 큰} 물체는?
+\seolfb{$B$} \\
+\bul 냄비와 뚝배기 중 열용량이 더 큰 물체는?
+\seolfb{뚝배기} ~~~ \seolfb{냄비는 빨리 끓고 식음.} \\
+\bul 냄비와 뚝배기에 라면을 끓이면 각각의 특징은?
+\seolfb{뚝배기는 오래 걸리고 잘 안 식음} \\\vspace{-12pt}%
+\memo{냄비에 끓인 사람이 다 먹을 때까지 뚝배기는 물도 안 끓음 \\
+뚝배기가 끓었는데 국물이 안 식어서 먹기 힘듦}%
+\end{sssbox}
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Specific Heat}
+\memo{subsub: 비열}%
+\ 열용량은 물체가 가진 열적 성질이다.
+같은 물질로 만든 물체라면 \hly{질량이 더 큰 물체}의 온도를 올릴 때
+\seolight{더 많은 열}이 필요할 것이다.
+\addlines{2}
+\begin{sssbox}
+\bul 물체 $A$를 \seolight{두 개 붙인} 물체 $A'$이 있다. \\
+\bul 같은 온도만큼 올리려면 $A'$는 $A$보다 \seolight{두 배}의 열이 필요하다. \\
+\bls (애초에 \seolight{하나씩} 두 물체를 데워서 \seolight{붙인다}고 생각할 수 있음) \\
+\bul 물체가 아닌 \seolfa{물질} 자체의 성질을 비교할 필요가 생김 \\
+\bls $\longrightarrow$ ~ \seolfa{질량}당 열용량의 개념이 자연스럽게 필요해짐
+\end{sssbox}
+\clearpage
+
+
+
+\ 물체의 질량에 관계없는 \hly{단위질량당 열용량}은 물체를 구성하는
+\seolfa{물질}에 대한 단위질량당 열용량이다. 이것을 \hly{\bd{비열}} $c$라고 정의한다.
+비열은 \hly{내부에너지를 저장하는 능력}의 차이이다.
+열용량 식(\autoref{eq:heat_capacity})은 다음과 같이 다시 쓸 수 있다.
+
+%% eq box. 비열
+\begin{eqbox} Q = c m \Delta T = c m (T_f - T_i)
+\label{eq:specific_heat} \end{eqbox}
+
+\ 칼로리와의 관계는 다음과 같다.
+\begin{equation} \hly{c = 1\,\mathrm{cal/g \cdot C^\circ}} = 1\,\mathrm{Btu/lb \cdot F^\circ} = 4186.8\,\mathrm{J/kg \cdot K} \end{equation}
+
+\begin{checkbox}
+A certain amount of heat $Q$ will warm \seolight{$1\,\mathrm{g}$} of material \seolight{$A$
+by $3\,^\circ\mathrm{C}$} and \seolight{$1\,\mathrm{g}$} of material \seolight{$B$
+by $4\,^\circ\mathrm{C}$}. Which material has the greater
+\seolight{specific heat}?\\\vspace{-12pt}%
+\memo{일정한 열 $Q$로 \seolight{$1\,\mathrm{g}$}의 물질 $A$는
+\seolight{$3\,^\circ\mathrm{C}$}만큼,
+\seolight{$1\,\mathrm{g}$}의 물질 $B$는
+\seolight{$4\,^\circ\mathrm{C}$}만큼 온도를 올릴 수 있다.
+어느 쪽의 \seolight{비열}이 더 큰가?}%
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bul 비열이 크다는 것은 \solight{같은 열}이 주어질 때 \solight{온도가 잘 안 올라간다}는 뜻이다. \\
+\bul 비열에 관한 식 $Q = c m \Delta T$(\autoref{eq:specific_heat})에 의해 같은 $Q$와 $m$에서 \\
+\bls $c$가 클수록 $\Delta T$가 작아진다.\\
+\memo{비열에 대해 다양하게 묘사해보자 \\
+가열 시간은? 필요한 에너지의 양은? \\
+비열이 크면 잘 버틴다. \\
+\seolight{열의 효과가 없다는 것이 아니다}. \\
+모두 머금고 보관한다. 다시 말해, 그만큼 다시 방출할 수 있다. \\
+뚝배기는 냄비보다 열용량이 크고, 구성 물질의 비열도 뚝배기가 크다.}%
+\bd{Ans: } $A$
+\end{solbox}
+\begin{checkbox*}
+질량이 \seolight{$100\,\mathrm{g}$}인 철에 열을 가하여 \seolight{$100\,^\circ\mathrm{C}$}가 되었을 때
+찬 물에 넣었더니 철의 온도가 \seolight{$30\,^\circ\mathrm{C}$}가 되었다.
+철이 잃은 \seolight{열량}은 얼마인가?
+(단, 철의 비열은 \seolight{$0.11\,\mathrm{cal/g \cdot K}$}이다.)
+\end{checkbox*}
+
+\begin{solbox}
+\memo{만약, 비열이 온도에 따라 변하면 \\
+$Q = m \int_{T_i}^{T_f} C(T) \, dT$으로 풀어야 함}%
+\bnset
+\bd{Sol: } $Q = c m \Delta T = 0.11 \times 100 \times 70 = 770\,(\mathrm{cal})$ \\
+\bd{Ans: } $0.77\,\mathrm{kcal}$
+\end{solbox}
+
+\begin{checkbox*}
+밀도가 \seolight{$1\,\mathrm{kg/L}$}인 \seolight{$5\,^\circ\mathrm{C}$}인 물 \seolight{$100\,\mathrm{mL}$}에
+밀도가 \seolight{$13\,\mathrm{kg/L}$}인 수은온도계 \seolight{$1\,\mathrm{mL}$}를 잠기게 넣었다.
+온도계의 처음 온도가 \seolight{$5\,^\circ\mathrm{C}$}였을 때, 충분한 시간이 지난 뒤 온도계의 눈금은 얼마가 되는가?
+(단, 물의 비열은 \seolight{$4.18\,\mathrm{kJ/kg \cdot K}$}이고,
+수은의 비열은 \seolight{$0.14\,\mathrm{kJ/kg \cdot K}$}이다.
+온도계는 유리를 무시하고 수은으로만 가정한다.)
+\end{checkbox*}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bul $c_w m_w \Delta T_w = c_m m_m \Delta T_m$에서 수은의 질량은 $m_m = 13.6 \times 0.001\,(\mathrm{kg})$이다. \\
+\bls $4.18 \times 0.1 \times (\solight{T}-5) = 0.14 \times \solight{13.6 \times 0.001} \times (10-\solight{T})$ \\
+\bd{Ans: } $T = 5.02\,^\circ\mathrm{C}$
+\end{solbox}
+
+\begin{checkbox*}
+온도가 \seolight{$100\,^\circ\mathrm{C}$}이고, 질량이 \seolight{$50\,\mathrm{g}$}인 금속 조각을
+물에 넣었더니 온도가 \seolight{$30\,^\circ\mathrm{C}$}로 낮아지며 \seolight{$752.5\,\mathrm{cal}$}의 열을 방출했다.
+금속의 비열은 얼마인가?
+\end{checkbox*}
+\addlines{1}
+\begin{solbox}
+\bnset
+\bd{Sol: } $c = \frac{Q}{m \Delta T} = \frac{752.5}{50 \times 70} = \solight{0.215\,\mathrm{cal/g \cdot K}}$\\
+\bd{Ans: } $0.215\,\mathrm{cal/g \cdot K}$ (알루미늄)
+\end{solbox}
+\clearpage
+
+
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Molar Specific Heat}
+\memo{subsub: 몰비열}%
+\ 물질의 양을 나타내는 데 편리한 단위는 \hly{몰($\mathrm{mol}$)}이고,
+$1\,\mathrm{mol}$은 \hly{어느 물질에서나 같다}.
+$1\,\mathrm{mol}$의 알루미늄에는 $6.02 \times 10^{23}$개의 기본단위(elementary units)가 들어 있다.
+
+\begin{equation*} 1\,\mathrm{mol} = 6.02 \times 10^{23}~\text{elementary units} \end{equation*}
+
+\ 비열 또한 단위질량이 아닌 \seolight{몰당 열용량}으로 정의할 수 있고,
+\hly{\bd{몰비열}}이라고 한다. \\
+\memo{표를 보고 \seolight{물과 금속을 비교}해보자 \\
+물보다 철, 구리 등 \seolight{금속의 비열이 훨씬 낮으므로} 쉽게 온도가 올라간다. \\
+\seolight{물}은 분자내 원자의 \seolight{병진, 회전, 진동 에너지}에 에너지를 \seolight{저장}하기
+때문에 시간과 열량이 많이 필요하다. \\
+즉, 비열이 \seolight{크다}. \\
+. \\
+\seolight{금속}은 고체구조로 \seolight{결속}되어 \seolight{진동 에너지}에만
+에너지를 \seolight{저장}하기 때문에 적은 양의 에너지를 저장한다. \\
+즉, 비열이 \seolight{작다}. \\
+. \\
+\seolight{육풍, 해풍}}%
+%% Tab. 실온에서 여러 물질의 비열과 몰비열
+\somespecificheatsandmolarspecificheats
+\memo{물의 비열은 1이다. \\
+구리, 얼음의 비열 아래 문제에서 사용 \\
+\seolight{반드시 단위에 유의}해야 함 \\
+어떤 단위를 쓸지 보고 따라가야 함}%
+\ \autoref{tab:some_specific_heats_and_molar_specific_heats}\은
+\hly{실온에서} 여러 물질의 비열과 몰비열을 나타낸 것이다.
+단원자로 이루어진 고체 원소들의 \seolight{실온에서}의 몰비열 값이 함께 있다.
+
+\ 보통 고체, 액체에서 에너지 전달이 있을 때, 압력은 (대기압으로) 일정하다고 가정한다.
+또는 압력을 가하여 팽창을 억제함으로써 부피를 일정하게 할 수도 있다.
+이처럼 \hly{압력이 일정}한 경우(등압 또는 정압)와
+\hly{부피가 일정}한 경우(등적 또는 정적)의 비열은 조금씩 \seolight{달라질 수 있다}.
+
+\ \seolight{고체와 액체}에서는 등압비열과 등적비열이 별로 \seolight{차이 나지 않는다}.
+하지만 \hly{기체의 경우} 등압비열과 등적비열은 \hly{크게 달라진다}.
+\clearpage
+
+
+
+\begin{sssbox}
+\bnset
+\bn 물의 비열은 1이다. \\
+\bns 하지만, 실제로 온도가 높아지면 비열은 살짝 감소한다. \\
+\bns \hly{표준상태}(약 $20\,^\circ\mathrm{C}$, $1\,\mathrm{atm}$)에서 대푯값이 1인 것이다. \\
+\bn 비열은 물질의 고유 성질이라고 이야기하지만, 조건에 따라 조금씩 변한다. \\
+\bns 그래서 보통 조건을 고정하고 고유 성질로 취급한다. \\
+\bns \autoref{tab:some_specific_heats_and_molar_specific_heats}에서
+실온임을 표기한 이유가 그 때문이다. \\
+\bn 한편, \hly{같은 물질}을 \hly{같은 온도}만큼 상승시키고자 하여도 \\
+\bns $\longrightarrow$ ~ 상태에 따라 다른 에너지 양이 필요하다. \\
+\bns $\longrightarrow$ ~ 비열은 온도와 압력에 영향을 받지만
+\seolight{고체, 액체에서는 무시}한다. \\
+\bns $\longrightarrow$ ~ \hly{기체}에서는 \hly{등압비열}과 \hly{등적비열}
+두 가지를 \seolight{구분}한다.
+\end{sssbox}
+
+
+
+
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Heats of Transformation}
+\memo{subsub: 변환열, 숨은열(잠열)}%
+\ 고체나 액체가 열에너지를 흡수하더라도 반드시 온도가 올라가는 것은 아니다.
+\hly{상태가 변화}할 때 분자 간의 \seolight{결합을 변화}시키는 데
+\seolight{에너지가 사용}되기 때문에
+상태 변화 중에는 \seolight{온도가 올라가지 않는다}.
+
+\anset
+\bd{\an \itl{Melting.}} \hly{융해(용융)}는 고체가 액체가 되는 것을 의미하고,
+\seolight{녹는다}고 말한다.
+얼음이 녹아 물이 되는 것처럼 고체는 녹으면 액체가 된다.
+반대 과정은 액체로부터 에너지를 제거하여 분자가 고정된 구조에 자리 잡도록 하는 것이고
+\bd{\itl{Solidification, Freezing}}\hly{(응고, 얼음)}이라고 한다. \\
+
+\bd{\an \itl{Vaporization, Evaporation, Boiling}} \hly{기화(증발, 끓음)}는
+액체가 기체가 되는 것을 의미한다.
+물이 끓어 수증기가 되는 것처럼 액체는 끓음 또는 증발을 통해 기체가 된다.
+반대 과정은 기체로부터 에너지를 제거하여 액체가 되게 하는 것이고
+\bd{\itl{Condensation}}\hly{(응축, 액화)}라고 한다. \\
+
+\memo{교재에서 승화를 다루지는 않음. 하지만 참고로 알고 있도록 하자}%
+\bd{\an \itl{Sublimation}} \hly{승화}는 고체가 기체가 되는 것을 의미한다.
+드라이아이스가 기체 상태의 이산화탄소가 되는 것처럼 고체가 승화하면 기체가 된다.
+반대 과정은 기체로부터 에너지를 제거하여 고체가 되게 하는 것이고
+\bd{\itl{Deposition, Desublimation}}\hly{(증착, 역승화)}라고 한다. \\
+
+\ 시료가 상태 변화를 일으키기 위해 열로 전달되는 단위질량당 에너지를 \hly{변환열(잠열) $L$}이라고 한다.
+질량이 $m$인 물질의 상태가 완전히 변할 때 총 에너지의 전달량은 다음과 같다.
+
+%% eq box. 변환열
+\begin{eqbox} Q = Lm
+\label{eq:heat_of_transformation} \end{eqbox}
+
+\ 액체에서 기체 또는 기체에서 액체로 상태가 변할 때 변환열을 \hly{증발열 $L_V$}라고 한다.
+물의 끓는점(응축점)에서 증발열은 다음과 같다. \\
+\memo{\seolight{$\mathrm{kJ/kg}$}을 \seolight{$\mathrm{J/g}$}로 나타낼 수 있다. \\
+$1\,\mathrm{g}$당 몇 $\mathrm{J}$의 에너지를 가해야 상태변화할 수 있는지에 대한 값이다.}%
+\begin{equation} L_V = 539\,\mathrm{cal/g} = 40.7\,\mathrm{kJ/mol} = 2256\,\mathrm{kJ/kg} \end{equation}
+
+\ 고체에서 액체 또는 액체에서 고체로 상태가 변할 때 변환열을 \hly{융해열 $L_F$}라고 한다.
+물의 어는점(녹는점)에서 융해열는 다음과 같다.
+\begin{equation} L_F = 79.5\,\mathrm{cal/g} = 6.01\,\mathrm{kJ/mol} = 333\,\mathrm{kJ/kg}
+\label{eq:l_f_water} \end{equation}
+\clearpage
+
+
+
+%% Tab. 변환열
+\someheatsoftransformation
+\ \autoref{tab:some_heats_of_transformation}\은 몇 가지 물질의 변환열을
+나타낸 것이다. \\\vspace{-12pt}
+\memo{물의 융해 잠열(용융 잠열)은 $333\,\mathrm{kJ/kg}$이다. \\
+아래 문제에서 쓰임. 단위에 유의할 것}%
+\begin{practicebox}{Hot slug in water, coming to equilibrium}
+A copper slug whose mass \seolight{$m_c$ is $75\,\mathrm{g}$} is heated in
+a laboratory oven to a temperature \seolight{$T$ of $312\,^\circ\mathrm{C}$}.
+The slug is then dropped into a glass beaker containing a mass
+\seolight{$m_w = 220\,\mathrm{g}$}
+of water. The heat capacity $C_b$ of the beaker is \seolight{$45\,\mathrm{cal/K}$}.
+The initial temperature $T_i$ of the water and the beaker is
+\seolight{$12\,^\circ\mathrm{C}$}. Assuming that the slug, beaker, and water are
+an isolated system and the water does not vaporize,
+find the final temperature $T_f$ of the system at thermal equilibrium. \\\vspace{-12pt}%
+\memo{평형에 도달하는 물속의 뜨거운 덩어리 \\
+ \\
+질량\seolight{($m_c$) $75\,\mathrm{g}$}의 구리 덩어리를 실험실에서
+\seolight{$312\,^\circ\mathrm{C}$}까지
+가열한 후, 물 \seolight{$220\,\mathrm{g}$}이 담긴 유리 비커에 떨어뜨렸다.
+비커의 열용량 $C_b$는 \seolight{$45\,\mathrm{cal/K}$}이고,
+물과 비커의 초기온도는 \seolight{$12\,^\circ\mathrm{C}$}이다.
+구리 덩어리와 비커, 물이 고립계를 이루며 물은 증발하지 않는다고 가정할 때,
+열평형을 이룬 계의 최종온도 $T_f$를 구하여라.}%
+\end{practicebox}
+\vspace{4cm}%
+
+\begin{practicebox}{Heat to change temperature and state}
+(a) How much heat must be absorbed by ice of mass
+\seolight{$m = 720\,\mathrm{g}$} at \seolight{$-10\,^\circ\mathrm{C}$} to take it
+to the liquid state at \seolight{$15\,^\circ\mathrm{C}$}? \\
+(b) If we supply the ice with a total energy of only \seolight{$210\,\mathrm{kJ}$}
+(as heat), what are the final state and temperature of the water? \\\vspace{-12pt}%
+\memo{온도와 상태를 바꾸는 열 \\
+ \\
+(a) 질량 \seolight{$m = 720\,\mathrm{g}$}인 \seolight{$-10\,^\circ\mathrm{C}$}의 얼음이
+\seolight{$15\,^\circ\mathrm{C}$}의 액체상태로 바뀌려면 열을 얼마나 흡수해야 되는가?  \\
+(b) 얼음에 \seolight{$210\,\mathrm{kJ}$}의 에너지만 (열로) 공급한다면 최종상태와
+온도는 어떻게 되는가?}%
+\end{practicebox}
+\clearpage
+
+
+
+\insertTeacherPages
+{ % 교사용 페이지 1 시작
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn 최종 온도를 $T_f$라고 할 때, 각자 갖는 초기 온도에서 모두 $T_f$가 된다. \\
+\bns 비커의 질량을 모르지만 비커 자체의 열용량이 주어졌으므로 \\
+\bns $T_i = 12\,^\circ\mathrm{C}$이고, $T = 312\,^\circ\mathrm{C}$라고 하면 \\
+\bns \autoref{eq:heat_capacity}와 \autoref{eq:specific_heat}에 의해 다음 식을 얻을 수 있다. \\\vspace{-12pt}%
+\memo{열용량 식 $Q = C \Delta T$ (\autoref{eq:heat_capacity}) \\
+비열 식 $Q = c m \Delta T$ (\autoref{eq:specific_heat})}%
+\vspace{-10pt}%
+\begin{align}
+\text{for the water\,: ~ } & Q_w = c_w m_w (T_f - T_i) \label{eq:water_qcmt} \\
+\text{for the beaker\,: ~ } & Q_b = C_b (T_f - T_i) \label{eq:beaker_qcmt}\\
+\text{for the copper\,: ~ } & Q_c = c_c m_c (T_f - \solight{T}) \label{eq:copper_qcmt}
+\end{align}
+\bn 열이 흡수될 때 $Q$값은 양수이고, 방출될 때 $Q$값은 음수이다. \\
+\bns 구리, 비커, 물이 \solight{고립계}를 이루고, \solight{계 내부에서 이동한 총 에너지는 $0$}이다.
+\begin{equation} Q_w + Q_b + Q_c = 0 \label{eq:q_total_zero} \end{equation}
+\bn \autoref{eq:water_qcmt} \autoref{eq:beaker_qcmt} \autoref{eq:copper_qcmt}을
+\autoref{eq:q_total_zero}에 대입하면 다음을 얻는다.
+\begin{equation} c_w m_w (T_f - T_i) + C_b (T_f - T_i) + c_c m_c (T_f - T) = 0 \label{eq:q_total_zero_t} \end{equation}
+\bn \autoref{eq:q_total_zero_t}에서 \solight{온도차이}는 섭씨온도와 절대온도가 같기 때문에 \\
+\bns 섭씨온도를 그대로 사용할 수 있다. 하지만 답을 분리할 때 \solight{$T$만 남게 되므로}, \\
+\bns \solight{답의 차원은 반드시 섭씨온도}로 표기한다. $T_f$에 대해 정리하면 다음과 같다.
+\begin{equation*} T_f = \frac{c_c m_c T + C_b T_i + c_w m_w T_i}{c_w m_w + C_b + c_c m_c} \end{equation*}
+\bn 비커의 열용량을 포함한 주어진 값과 구리, 물의 비열을 \autoref{tab:some_specific_heats_and_molar_specific_heats}\을 \\
+\bns 참고하여 대입하면 다음을 얻는다. \\\vspace{-12pt}%
+\memo{차원분석 하면 cmt를 cm으로 나누니 온도 단위가 맞음}%
+\begin{align*} T_f &= \frac{(0.0923 \times 75 \times 312) + (45 \times 12) + (1.00 \times 220 \times 12)}
+    {(1.00 \times 220) + 45 + (0.0923 \times 75)} \\
+    &= \frac{5339.82}{271.9225}
+    \approx 19.637286 ...
+    \,(\solight{^\circ\mathrm{C}}) \end{align*}
+\bd{Ans: } $20\,^\circ\mathrm{C}$
+\end{solbox}
+} % 교사용 페이지 1 끝
+{ % 교사용 페이지 2 시작
+\begin{solbox}
+\bnset
+\bd{Sol(a): } \\
+\bn $-10\,^\circ\mathrm{C}$의 얼음이 $15\,^\circ\mathrm{C}$의 물이 되는 과정을 빠짐없이 고려해야 한다. \\
+\bns \bul 1단계 : $-10\,^\circ\mathrm{C}$의 얼음이 $0\,^\circ\mathrm{C}$의 얼음이 된다. ($Q_1 = c_\text{\solight{ice}} m \Delta T $ 흡수) \\
+\bns \bul 2단계 : $0\,^\circ\mathrm{C}$의 얼음이 $0\,^\circ\mathrm{C}$의 물이 된다. (\solight{변환열} $Q_2 = L_F m$ 흡수) \\
+\bns \bul 3단계 : $0\,^\circ\mathrm{C}$의 물이 $15\,^\circ\mathrm{C}$의 물이 된다. ($Q_3 = c_\text{\solight{liq}} m \Delta T $ 흡수) \\
+
+\bn 1단계에서 \autoref{eq:specific_heat}에 얼음의 비열을 \autoref{tab:some_specific_heats_and_molar_specific_heats}\을 참고하여 다음을 얻는다. \\
+\bns 반드시 \solight{단위에 유의}하여 값을 대입한다. \\\vspace{-10pt}%
+\memo{열용량 식 $Q = C \Delta T$ (\autoref{eq:heat_capacity}) \\
+비열 식 $Q = c m \Delta T$ (\autoref{eq:specific_heat}) \\
+얼음의 비열은 $0.530\,\mathrm{cal/g \cdot K}$ 또는 \\
+$2220\,\mathrm{J/kg \cdot K}$을 사용할 수 있다. \\
+(b)에서 $\mathrm{J}$을 요구하므로, $2220\,\mathrm{J/kg \cdot K}$을 사용한다.
+온도 차이가 필요하므로 섭씨온도를 써도 된다.
+답의 차원은 에너지이다. \\
+잠열 식 $Q = Lm$ (\autoref{eq:heat_of_transformation}) \\
+물의 융해 잠열 $333\,\mathrm{kJ/kg}$ (\autoref{eq:l_f_water})}%
+\begin{equation*} Q_1 = c_\text{ice} m (T_f - T_i) = 2220 \times 0.720 \times [\solight{0}-(-10)] = \num{15984}\,\mathrm{J} \end{equation*}
+\bn 2단계에서 \autoref{eq:heat_of_transformation}에
+\autoref{eq:l_f_water}을 참고하여 다음을 얻는다.
+\begin{equation*} Q_2 = L_F m = 333 \times 0.720 = \num{239760}\,(\mathrm{J}) \end{equation*}
+\bn 3단계에서 \autoref{eq:specific_heat}에 물의 비열을 \autoref{tab:some_specific_heats_and_molar_specific_heats}\을 참고하여 다음을 얻는다. \\
+\begin{equation*} Q_3 = c_\text{liq} m (T_f - T_i) = 4187 \times 0.720 \times [\solight{15}-(-10)] = \num{45219.6}\,\mathrm{J} \end{equation*}
+\bn 계가 흡수한 전체 열량은 다음과 같다.
+\begin{equation*} Q_{tot} = Q_1 + Q_2 + Q_3 = \num{300963.6}\,\mathrm{J} \end{equation*}
+\bd{Ans(a): } $300\,\mathrm{kJ}$ \\
+
+\bd{Sol(b): } \\
+\bnset
+\bn $210\,\mathrm{kJ}$의 에너지는 얼음을 완전히 녹일 수 없다. \\
+\bns \bul 1단계 : $-10\,^\circ\mathrm{C}$의 얼음이 $0\,^\circ\mathrm{C}$의 얼음이 된다. \\
+\bns \bul 2단계 : $0\,^\circ\mathrm{C}$의 얼음 중 일부만 물이 된다. \\
+
+\memo{남은(remaining) 열은 $(210 - 15.984)\,\mathrm{kJ}$}%
+\bn 위에서 구한대로, 1단계에는 $15.984\,\mathrm{kJ}$의 열이 사용되므로, \\
+\bns 남은 열은 $194.016\,\mathrm{kJ}$이다. \\
+
+\memo{잠열 식 $Q = Lm$ (\autoref{eq:heat_of_transformation})}%
+\bn $194.016\,\mathrm{kJ}$의 에너지로 녹일 수 있는 얼음의 양을 계산해야 한다. \\
+\bns \autoref{eq:heat_of_transformation}\을 이용하면 다음을 얻는다. \\
+\begin{equation*} m = \frac{Q_\text{rem}}{L_F} = \frac{194.016}{333}= 0.58263...\,\mathrm{kg} \end{equation*}
+
+\bn 얼음 $580\,\mathrm{g}$을 녹일 수 있고, 남은 얼음의 양은 $140\,\mathrm{g}$이다.\\
+
+\bd{Ans(b): } $0\,^\circ\mathrm{C}$의 얼음 $140\,\mathrm{g}$과 물 $580\,\mathrm{g}$
+\end{solbox}
+} % 교사용 페이지 2 끝
+\clearpage

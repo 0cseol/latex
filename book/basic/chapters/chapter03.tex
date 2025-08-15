@@ -1,0 +1,137 @@
+\chapter{연습}
+\section{첫 번째 연습}
+\blue{블루 blue} \red{레드 red} \gray{그레이 gray} \\
+\blueb{블루볼드 blueb} \redb{레드볼드 redb} \grayb{그레이볼드 grayb} \\
+\bd{볼드 bd} \itl{이탤릭 itl} \\
+\memo{나만보는 memo} \\
+\seolf{seolf함수} \\
+\hl{형광펜 하이라이트 hl} \hlbold{형관펜 볼드 hlbold} 여러 줄 여러 줄 여러 줄 여러 줄 \\
+\centertext{여러 줄\\가운데정렬}
+바로 다음 이어서 쓰기, 바로 다음 이어서 쓰기, 바로 다음 이어서 쓰기, 바로 다음 이어서 쓰기
+
+\anum\ anum은 이렇게 쓰고 \\
+\anum\ 이렇게 쓰고 \\
+중간에 내용 적었다가 \\
+\anum\ 다시 쓰고 \\
+\setcounter{anumcounter}{0}
+초기화 했다가 \\
+\anum\ 다시 쓰고 \\
+\textbf{\anum\ 굵게 지정해서 다시 쓰고} \\
+중간에 내용 적었다가 \\
+\anum\ 다시 쓰고 \\
+\bnum\ bnum은 이렇게 쓰고 \\
+\bnum\ 다시 쓰고 \\
+\setcounter{bnumcounter}{0}
+초기화 했다가 \\
+\bnum\ 다시 쓰고 \\
+
+\newpage
+
+\section{두 번째 연습은 3.1 처럼 들어감 - 페이지마다 뜨기도 함}
+\subsection{이건 3.1.1 처럼 들어감 여기까지 목차 정리됨}
+\subsubsection{이건 3.1.1.1 처럼 들어가야하는데 번호 안뜨고, 목차에 안들어감}
+
+다음페이지 \\
+\newpage
+
+글자만 \grayinline{박스로} 채우기
+\begin{graybox}
+회색 박스
+\end{graybox}
+
+\begin{redbox}
+빨간배경 박스 \\
+redbox
+\end{redbox}
+
+\begin{bluebox}
+파란 배경 박스 \\
+bluebox
+\end{bluebox}
+
+\newpage
+\subsection{표 정리}
+
+간단한 표는 내부에 삽입하지만, 중요하고 참조할만한 것은 table에 모아둡니다. \\
+LCR로 지정한 표의 모습 \\
+\vspace{-1em} \\ % 이정도 여백 있어야 적당히 보이는 것 같음
+\begin{tabular}{|L{3cm}|C{3cm}|R{5cm}|} % 열 3개: 폭 3, 3, 5cm 정렬은 LCR, 테두리 있음
+\hline
+\graycell{구분} & \bluecell{내용} & \bluecell{내용} \\
+\hline
+\redcell{경고} & 중요 사항 & \\
+\hline
+\end{tabular}
+
+tab 함수를 새로 만들어서 지정하였음 \\
+\tab{|L{3cm}|C{3cm}|R{5cm}|}{
+\graycell{구분} & \bluecell{내용} & \bluecell{내용} \\
+\hline
+\raggedleft 오른쪽 정렬 & \raggedright 다시 왼쪽 정렬 \tabularnewline
+}
+
+p형태로 셀마다 정렬 따로한 모습 \\
+\vspace{-2.1em} % 가운데 정렬시 이정도 여백
+\begin{center}
+\begin{tabular}{|p{4cm}|p{4cm}|}
+\hline
+\raggedright 왼쪽 정렬 & \centering 가운데 정렬 \tabularnewline
+\hline
+\raggedleft 오른쪽 정렬 & \raggedright 다시 왼쪽 정렬 \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+ctab 함수를 새로 만들어서 지정하였음 \\
+\ctab{|p{4cm}|p{4cm}|}{
+\raggedright 왼쪽 정렬 & \centering 가운데 정렬 \tabularnewline
+\hline
+\raggedleft 오른쪽 정렬 & \raggedright 다시 왼쪽 정렬 \tabularnewline
+}
+
+
+표에 label을 달기 위해서는 table 안에 tabular를 넣고, caption, label을 씁니다.
+\begin{table}[htbp] % 표 float 환경 시작
+  \centering % 가운데 정렬
+  \begin{tabular}{|c|c|}
+    \hline
+    항목 & 내용 \\
+    \hline
+    A & 설명 \\
+    \hline
+  \end{tabular}
+  \caption{설명용 표 제목. 번호는 chapter에 맞게 부여됨}
+  \label{tab:example} % 추후 참조 가능
+\end{table}
+
+\biglabel{12.} 빅라벨 사용 방법 big label
+
+\newpage
+\subsection{표의 결론}
+
+tab 함수를 새로 만들어서 지정하였음 \\
+\tab{|L{3cm}|C{3cm}|R{5cm}|}{
+\graycell{구분} & \redcell{내용} & \bluecell{내용} \\
+\hline
+\leftcell{왼쪽} & \centercell{가운데} & \rightcell{오른쪽} \\
+\hline
+\bluecell{\leftcell{왼쪽}} & graycell{\centercell{가운데}} & \redcell{\rightcell{오른쪽}} \\
+}
+\\\\
+ctab(가운데정렬) 함수를 새로 만들어서 지정하였음 \\
+\ctab{|p{4cm}|p{4cm}|}{
+\leftcell{왼쪽} & \centercell{가운데}  \\
+\hline
+\centercell{가운데} & \rightcell{오른쪽} \\
+}
+table 만든 것 \\
+\begin{table}[htbp] % 표 float 환경 시작
+  \ctab{|p{4cm}|p{4cm}|}{
+  \leftcell{왼쪽} & \centercell{가운데}  \\
+  \hline
+  \centercell{가운데} & \rightcell{오른쪽} \\}
+  \caption{설명용 표 제목. 번호는 chapter에 맞게 부여됨}
+  \label{tab:example1} % 추후 참조 가능
+\end{table}
+
+참조는 `표 \ref{tab:example1}' 이런식으로 할 수 있음

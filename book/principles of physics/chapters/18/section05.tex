@@ -1,0 +1,200 @@
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The First Law of Thermodynamics}
+\memo{section: 열역학 제1법칙}%
+\ 본문 내용
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{A Closer Look at Heat and Work}
+\memo{sub: 열과 일에 대한 자세한 고찰}%
+\ 본문 내용
+
+%% Fig. 피스톤 속 기체가 하는 일과 열 전달
+\gasinapistonandheattransfer
+\memo{피스톤이 달린 원통 안에 기체가 갇혀 있다. 열저장고의 온도 $T$를 조절하여
+열 $Q$를 기체에 더하거나 기체에서 제거할 수 있다. 피스톤이 움직일 때 기체는 $W$의 일을한다.}%
+\autoref{fig:gas_in_a_piston_and_heat_transfer}\은
+피스톤 속 기체가 하는 일과 열 전달을 나타낸 것이다.
+
+\begin{align}
+    dW&= \vec{F} \cdot d\vec{s} = (pA)(ds) = p (A\, ds) \notag \\
+    &= p\, dV
+\end{align}
+
+%% eq box. 기체가 한 일
+\begin{eqbox} W = \int dW = \int_{V_i}^{V_f} p\, dV
+\label{eq:work_done_by_a_gas} \end{eqbox}
+
+%% Fig. 초기 상태에서 최종 상태로 이동할 때 시스템(기체)이 수행하는 일의 양
+\workinastatechange
+\memo{(a) 색칠한 부분은 초기상태 $i$에서 최종상태 $f$로 가면서 계가 한 일 $W$를 나타낸다.
+계의 부피가 증가하므로 일 $W$는 양의 값이다. \\
+(b) $W$ 역시 양의 값이지만 (a)의 경우보다 크다. \\
+(c) $W$는 여전히 양의 값이지만 (a)보다 더 작다. \\
+(d) $W$는 훨씬 더 작을 수도 있고 (경로 $icdf$), 훨씬 더 클 수도 있다(경로 $ighf$). \\
+(e) 상태 $f$에서 $i$로 갈 때 외부력이 가해져서 기체가 수축된다. 이때 계(기체)가 한 일 $W$는 음의 값이다. \\
+(f) 한 번의 순환과정 동안 계가 한 알짜 일 $W_{\mathrm{net}}$은 색칠한 부분의 면적이다.}%
+\autoref{fig:work_in_a_state_change}\은 초기 상태에서 최종 상태로 이동할 때 시스템(기체)이 수행하는 일의 양
+
+\begin{checkbox}
+The $p-V$ diagram here shows six curved paths (connected by vertical paths)
+that can be followed by a gas. Which two of the curved paths should
+be part of a closed cycle (those curved paths plus connecting vertical paths)
+if the net work done by the gas during the cycle is to be at its maximum positive value? \\
+\memo{그림과 같이 기체의 변화를 나타내는 수직경로로 연결되어 있는 여섯 가지 $p-V$ 곡선이 있다.
+순환과정 동안 기체가 한 알짜일이 최대가 되도록 닫힌 경로를 만들때,
+곡선 가운데 어느 두 개를 골라야 하는가?}%
+
+%% Fig. 여섯 가지 pv 곡선
+\quickfig{six_thermodynamic_paths_on_a_pv_diagram}
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn  \\
+\bn  \\
+\bn  \\
+\hspace*{1em} (ㅇㅇ \\
+\hspace*{1em} \, ㅇㅇ) \\
+
+\bd{Ans(a): } \\
+ \\
+\bd{Ans(b): } \\
+
+\end{solbox}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{First Law of Thermodynamics}
+\memo{sub: 열역학 제1법칙}%
+\ 본문 내용
+
+%% eq box. 열역학 제1법칙
+\begin{eqbox} \Delta E_{\text{int}} = E_{\text{int},f} - E_{\text{int},i} = Q - W ~~~~~ \text{(first law)}
+\label{eq:first_law_of_thermodynamics} \end{eqbox}
+
+%% eq box. 열역학 제1법칙 미분형
+\begin{eqbox} dE_{\text{int}} = dQ - dW ~~~~~ \text{(first law)}
+\label{eq:differential_form_of_first_law_of_thermodynamics} \end{eqbox}
+
+\begin{checkbox}
+The figure here shows four paths on a $p-V$ diagram along which a gas can be
+taken from state $i$ to state $f$. Rank the paths according to
+(a) the change $\Delta E_{\mathrm{int}}$ in the internal energy of the gas,
+(b) the work $W$ done by the gas, and (c) the magnitude of the energy
+transferred as heat $Q$ between the gas and its environment, greatest first. \\
+\memo{그림의 $p-V$ 곡선 네 가지는 기체가 초기상태 $i$에서 최종상태 $f$로 변할 때의 경로이다.
+다음의 양이 큰 경로부터 순서대로 나열하여라 \\
+(a) 기체 내부에너지의 변화 $\Delta E_{\mathrm{int}}$, \\
+(b) 기체가 한 일 $W$, \\
+(c) 기체와 주위 사이에 전달된 열에너지 $Q$의 크기.}%
+
+%% Fig. 네 가지 pv 곡선
+\quickfig{four_thermodynamic_paths_on_a_pv_diagram}
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn  \\
+\bn  \\
+\bn  \\
+\hspace*{1em} (ㅇㅇ \\
+\hspace*{1em} \, ㅇㅇ) \\
+
+\bd{Ans(a): } \\
+ \\
+\bd{Ans(b): } \\
+
+\end{solbox}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Some Special Cases of the First Law of Thermodynamics}
+\memo{sub: 열역학 제1법칙의 특수한 경우}%
+\ 본문 내용
+
+%% Tab. 열역학 제1법칙: 네 가지 특별한 과정
+\thefirstlawofthermodynamics
+\memo{단열, 등적, 순환, 자유팽창}%
+\autoref{tab:the_first_law_of_thermodynamics}\은 열역학 제1법칙의 네 가지 특별한 과정을 나타낸 것이다. \\
+\\
+\anset
+\bd{\an \itl{Adiabatic processes.}} 단열과정은
+\begin{equation} \Delta E_{\text{int}} = -W ~~~~~ \text{(adiabatic process)} \end{equation}
+
+%% Fig. 단열팽창
+\adiabaticexpansion
+\memo{단열팽창은 피스톤 위에 놓인 납알을 천천히 없애면 구현할 수 있다.
+납알을 더하면 언제든지 반대 과정을 만들 수 있다.}%
+\autoref{fig:adiabatic_expansion}\은 단열팽창에 대한 
+
+\bd{\an \itl{Constant-volume processes.}} 등적과정은
+\begin{equation} \Delta E_{\text{int}} = Q ~~~~~ \text{(constant-volume process)} \end{equation}
+
+\bd{\an \itl{Cyclical processes.}} 순환과정은
+\begin{equation} Q = W ~~~~~ \text{(cyclical process)} \end{equation}
+
+\bd{\an \itl{Free expansions.}} 자유팽창은
+\begin{equation} \Delta E_{\text{int}} = 0 ~~~~~ \text{(free expansion)} \end{equation}
+
+%% Fig. 자유팽창
+\freeexpansion
+\memo{자유팽창과정의 초기단계. 잠금마개를 열면 기체가 양쪽 방을 채우면서,
+결국에는 평형상태에 도달하게 된다.}%
+\autoref{fig:free_expansion}\은 자유팽창과정의 초기 단계를 나타낸 것이다.
+
+\begin{checkbox}
+For one complete cycle as shown in the $p-V$ diagram here, are
+(a) $\Delta E_{\text{int}}$ for the gas and
+(b) the net energy transferred as heat $Q$ positive, negative, or zero? \\
+\memo{오른편의 $p-V$ 그림은 어떤 순환과정이다. \\
+(a) 기체의 $\Delta E_{\text{int}}$, \\
+(b) 알짜 열에너지 전달량 $Q$는 양수인가, 음수인가, 아니면 $0$인가?}%
+
+%% Fig. pv 순환과정의 예시
+\quickfig{example_of_a_pv_cycle}
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn  \\
+\bn  \\
+\bn  \\
+\hspace*{1em} (ㅇㅇ \\
+\hspace*{1em} \, ㅇㅇ) \\
+
+\bd{Ans(a): } \\
+ \\
+\bd{Ans(b): } \\
+
+\end{solbox}
+
+\begin{practicebox}{First law of thermodynamics: work, heat, internal energy change}
+%% Fig. 일정한 압력에서 끓는 물
+\boilingwateratconstantpressure
+\memo{물이 일정한 압력에서 끓는다. 액체인 물이 완전히 수증기로 변환할 때까지
+열저장고는 에너지를 열로 전달한다. 팽창하는 기체는 피스톤을 밀어 올리면서 일을 한다.}%
+Let $1.00\,\mathrm{kg}$ of liquid water at $100\,^\circ\mathrm{C}$
+be converted to steam
+at $100\,^\circ\mathrm{C}$ by boiling at standard atmospheric pressure
+(which is $1.00\,\mathrm{atm}$ or $1.01 \times 10^{5}\,\mathrm{Pa}$)
+in the arrangement of \autoref{fig:boiling_water_at_constant_pressure}.
+The volume of that water changes from an initial value of
+$1.00 \times 10^{-3}\,\mathrm{m^3}$ as a liquid to
+$1.671\,\mathrm{m^3}$ as steam. \\
+(a) How much work is done by the system during this process? \\
+(b) How much energy is transferred as heat during the process? \\
+\memo{원서에서는 $1.00\,\mathrm{kg}$인데, \hly{번역서는 $5.00\,\mathrm{kg}$}로 나옴 \\
+열역학 제1법칙: 일, 열, 내부에너지 변화 \\
+\autoref{fig:boiling_water_at_constant_pressure}처럼
+$100\,^\circ\mathrm{C}$ 물 $1.00\,\mathrm{kg}$이 표준대기압
+($1.00\,\mathrm{atm}$, 즉 $1.01 \times 10^{5}\,\mathrm{Pa}$)에서
+$100\,^\circ\mathrm{C}$의 수증기로 바뀌었다. 물의 초기 부피는
+$1.00 \times 10^{-3}\,\mathrm{m^3}$였고 수증기가 되었을 때 부피는
+$1.671\,\mathrm{m^3}$였다. \\
+(a) 계가 한 일은 얼마인가? \\
+(b) 이 과정에서 열의 형태로 전달된 에너지는 얼마인가?}%
+Sol: \\
+Ans:
+\end{practicebox}
+\clearpage

@@ -1,0 +1,171 @@
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Heat Transfer Mechanisms}
+\memo{section: 열전달 과정}%
+\ 본문 내용
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Heat Transfer Mechanisms}
+\memo{sub: 열전달 과정}%
+\ 본문 내용
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Conduction}
+\memo{subsub: 전도}%
+\ 본문 내용
+
+%% Fig. 열전도
+\thermalconduction
+\autoref{fig:thermal_conduction}\은 열전도를 나타낸 것이다.
+
+%% eq box. 전도율
+\begin{eqbox} P_{\text{cond}} = \frac{Q}{t} = kA \frac{T_H - T_C}{L}
+\label{eq:conduction_rate} \end{eqbox}
+
+%% Tab. 열전도도
+\somethermalconductivities
+\autoref{tab:some_thermal_conductivities}\은 몇 가지 물질의 열전도도를 나타낸 것이다.
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Thermal Resistance to Conduction (\(R\) -Value)}
+\memo{subsub: 전도에 대한 열저항(\(R\) 값)}%
+\ 본문 내용
+
+\begin{equation} R = \frac{L}{k} \end{equation}
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Conduction Through a Composite Slab}
+\memo{subsub: 복합판을 통한 열전도}%
+\ 본문 내용
+
+%% Fig. 복합판을 통한 열전도
+\thermalconductionthroughacompositeslab
+\autoref{fig:thermal_conduction_through_a_composite_slab}\은 복합판을 통한 열전도를 나타낸 것이다.
+
+\begin{equation} P_{\text{cond}} = \frac{k_2 A (T_H - T_X)}{L_2} = \frac{k_1 A (T_X - T_C)}{L_1} \end{equation}
+
+\begin{equation} T_X = \frac{k_1 L_2 T_C + k_2 L_1 T_H}{k_1 L_2 + k_2 L_1} \end{equation}
+
+\begin{equation} P_{\text{cond}} = \frac{A(T_H - T_C)}{L_1 / k_1 + L_2 / k_2} \end{equation}
+
+\begin{equation} P_{\text{cond}} = \frac{A(T_H - T_C)}{\sum (L / k)} \end{equation}
+
+\begin{checkbox}
+The figure shows the face and interface temperatures of a composite slab
+consisting of four materials, of identical thicknesses, through
+which the heat transfer is steady. Rank the materials according
+to their thermal conductivities, greatest first.\\
+\memo{오른편 그림처럼 두께가 같은 네 가지 물질로 이루어진 복합판에 열이
+정상상태로 전달되고 있다. 표면과 경계면의 온도가 그림과 같을 때
+열전도도가 가장 큰 순서대로 나열하여라.}%
+
+%% Fig. 네 가지 물질로 이루어진 복합판
+\quickfig{composite_slab_composed_of_four_materials}
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn  \\
+\bn  \\
+\bn  \\
+\hspace*{1em} (ㅇㅇ \\
+\hspace*{1em} \, ㅇㅇ) \\
+
+\bd{Ans(a): } \\
+ \\
+\bd{Ans(b): } \\
+
+\end{solbox}
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Convection}
+\memo{subsub: 대류}%
+\ 본문 내용
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Radiation}
+\memo{subsub: 복사}%
+\ 본문 내용
+
+%% eq box. 물체가 전자기복사로 에너지를 내놓는 비율
+\begin{eqbox} P_{\text{rad}} = \sigma \varepsilon A T^4
+\label{eq:energy_emission_rate_by_electromagnetic_radiation} \end{eqbox}
+
+%% Fig. 색깔을 입힌 열상사진
+\falsecolorthermogram
+\memo{색깔을 입힌 열상사진은 고양이의 에너지 복사율을 나타낸다.
+흰색과 빨간색은 복사율이 가장 높은 곳이다. 따라서 고양이 코가 가장 차다.}%
+\autoref{fig:false_color_thermogram}\은 색깔을 입힌 열상사진이다.
+
+%% eq box. 물체가 주위로부터 열복사로 에너지를 흡수하는 비율
+\begin{eqbox} P_{\text{abs}} = \sigma \varepsilon A T_{\text{env}}^4
+\label{eq:energy_absorption_rate_by_thermal_radiation} \end{eqbox}
+
+%% eq box. 에너지 교환의 알짜 비율
+\begin{eqbox} P_{\text{net}} = P_{\text{abs}} - P_{\text{rad}} = \sigma \varepsilon A \left( T_{\text{env}}^4 - T^4 \right)
+\label{eq:net_energy_exchange_rate} \end{eqbox}
+
+%% Fig. 방울뱀의 복사 감지
+\thermalradiationdetectioninarattlesnake
+\memo{방울뱀의 얼굴에는 캄캄한 야음에도 동물을 공격할 수 있는 열복사 감지기가 있다.}%
+방울뱀(\autoref{fig:thermal_radiation_detection_in_a_rattlesnake})은 열복사를 감지할 수 있다.
+
+\clearpage
+\begin{practicebox}{Thermal conduction through a layered wall}
+%% Fig. 정상상태의 열전도가 일어나는 벽
+\steadystateheattransferthroughawall
+\memo{정상상태의 열전도가 이루어지고 있는 네 겹으로 이루어진 벽}%
+\autoref{fig:steady_state_heat_transfer_through_a_wall} shows
+the cross section of a wall made of white pine of thickness $L_a$
+and brick of thickness $L_d\,(= 2.0L_a)$, sandwiching two layers of
+unknown material with identical thicknesses and thermal conductivities.
+The thermal conductivity of the pine is $k_a$ and that of the brick
+is $k_d\,(= 5.0k_a)$. The face area $A$ of the wall is unknown.
+Thermal conduction through the wall has reached the steady state;
+the only known interface temperatures are  $T_1 = 25\,^\circ\mathrm{C}$,
+$T_2 = 20\,^\circ\mathrm{C}$, and $T_5 = -10\,^\circ\mathrm{C}$.
+What is interface temperature $T_4$? \\
+\memo{여러 층의 벽을 통한 열전도 \\
+\autoref{fig:steady_state_heat_transfer_through_a_wall}의 벽은
+맨 안쪽이 두께 $L_a$ 인 전나무 판이고 바깥쪽은 두께 $L_d\,(= 2.0L_a)$인
+벽돌로 이루어져 있다. 두 벽 사이에는 두께와 열전도도가 동일한 두 판이 들어가 있다.
+전나무와 벽돌의 열전도도는 각각 $k_a$, $k_d\,(= 5.0k_a)$이고,
+벽의 면적 $A$의 값은 모른다. 벽을 통한 열전도가 정상상태에 도달했을 때
+알고 있는 온도는 $T_1 = 25\,^\circ\mathrm{C}$,
+$T_2 = 20\,^\circ\mathrm{C}$, $T_5 = -10\,^\circ\mathrm{C}$이다.
+경계면의 온도 $T_4$는 얼마인가?}%
+Sol: \\
+Ans:
+\end{practicebox}
+
+\begin{practicebox}{Making ice by radiating to the sky}
+During an extended wilderness hike, you have a terrific craving
+for ice. Unfortunately, the air temperature drops to only
+$6.0\,^\circ\mathrm{C}$ each night—too high to freeze water.
+However, because a clear, moonless night sky acts like a blackbody
+radiator at a temperature of $T_s = -23\,^\circ\mathrm{C}$,
+perhaps you can make ice by letting a shallow layer of water radiate
+energy to such a sky. To start, you thermally insulate a container
+from the ground by placing a poorly conducting layer of, say,
+foam rubber, bubble wrap, Styrofoam peanuts, or straw beneath it.
+Then you pour water into the container, forming a thin, uniform
+layer with mass $m = 4.5\,\mathrm{g}$, top surface $A = 9.0\,\mathrm{cm^2}$,
+depth $d = 5.0\,\mathrm{mm}$, emissivity $\varepsilon = 0.90$,
+and initial temperature $6.0\,^\circ\mathrm{C}$. Find the time
+required for the water to freeze via radiation. Can the freezing
+be accomplished during one night? \\
+\memo{하늘로 복사하여 얼음 만들기 \\
+긴 황야 도보여행을 하는 동안 얼음을 먹고 싶어졌다. 불행하게도 공기의 온도는
+밤마다 $6.0\,^\circ\mathrm{C}$로 떨어져 얼음이 얼기에는 온도가 너무 높다.
+그러나 맑고, 달이 없는 밤하늘은 온도
+$T_s = -23\,^\circ\mathrm{C}$ 에서 흑체와 같이 작용하므로 물의 얇은 층에서
+에너지를 밤하늘로 복사 방출하여 얼음을 만들 수 있을 것이다. 먼저 거품 고무,
+거품 포장지, 스티로폼이나 밀짚과 같이 열을 잘 전달하지 않는 층을 용기 아래
+지면에 놓아 용기를 열적으로 고립시킨다. 그리고 질량 $m = 4.5\,\mathrm{g}$,
+윗면의 넓이 $A = 9.0\,\mathrm{cm^2}$, 깊이 $d = 5.0\,\mathrm{mm}$,
+복사율 $\varepsilon = 0.90$, 초기온도 $6.0\,^\circ\mathrm{C}$인 용기에
+물을 붓는다. 복사에 의해 물이 어는 데 걸리는 시간을 구하여라.
+하루 밤 동안 얼릴 수 있는가?}%
+Sol: \\
+Ans:
+\end{practicebox}

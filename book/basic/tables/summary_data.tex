@@ -1,0 +1,32 @@
+%% 표 1: 유효숫자 판별 규칙 요약
+\newcommand{\summarytableA}{
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\textbf{구분} & \textbf{설명} \\
+\hline
+규칙 1 & 0이 아닌 숫자는 모두 유효숫자 \\
+규칙 2 & 유효숫자 사이의 0은 유효숫자 \\
+규칙 3 & 소수점이 있는 경우 끝의 0도 유효숫자 \\
+규칙 4 & 소수점이 없는 경우 끝의 0은 유효숫자 아님 \\
+\hline
+\end{tabular}
+\caption{유효숫자 판별 규칙 요약}
+\end{table}
+}
+
+\newcommand{\summarytableB}{
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\textbf{연산 종류} & \textbf{유효숫자 유지 기준} \\
+\hline
+덧셈/뺄셈 & 소수점 기준, 가장 적은 소수점 자리수 \\
+곱셈/나눗셈 & 전체 유효숫자 수 기준, 가장 적은 유효숫자 \\
+\hline
+\end{tabular}
+\caption{계산 시 유효숫자 처리 기준}
+\end{table}
+}

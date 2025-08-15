@@ -1,0 +1,70 @@
+code,childDeptNameKor,childDeptNameEng,parentDeptNameKor,parentDeptNameEng,parentAcademNameEng,childAcademNameEng
+PH,물리학과,Department of Physics,,,,Physics
+MAS,수리과학과,Department of Mathematical Sciences,,,,Mathematical Sciences
+CH,화학과,Department of Chemistry,,,,Chemistry
+NST,나노과학기술대학원,Graduate School of Nanoscience and Technology,,,,Nanoscience and Technology
+QU,양자대학원,Graduate School of Quantum Science and Technology,,,,Quantum Science and Technology
+BS,생명과학과,Department of Biological Sciences,,,,Biological Sciences
+MSE,의과학대학원,Graduate School of Medical Science and Engineering,,,,Medical Science and Engineering
+BCS,뇌인지과학과,Department of Brain and Cognitive Sciences,,,,Brain and Cognitive Sciences
+EB,공학생물학대학원,Graduate School of Engineering Biology,,,,Engineering Biology
+SR,줄기세포및재생생물학대학원,Graduate School of Stem Cell and Regenerative Biology,,,,Stem Cell and Regenerative Biology
+CE,건설및환경공학과,Department of Civil and Environmental Engineering,,,,Civil and Environmental Engineering
+ME,기계공학과,Department of Mechanical Engineering,기계항공공학부,School of Mechanical and Aerospace Engineering,Mechanical and Aerospace Engineering,Mechanical Engineering
+OSE,해양시스템대학원,Graduate School of Ocean Systems Engineering,기계항공공학부,School of Mechanical and Aerospace Engineering,Mechanical and Aerospace Engineering,Ocean Systems Engineering
+AE,항공우주공학과,Department of Aerospace Engineering,,,,Aerospace Engineering
+BIS,바이오및뇌공학과,Department of Bio and Brain Engineering,,,,Bio and Brain Engineering
+BCE,뇌인지공학프로그램,Program of Brain and Cognitive Engineering,바이오및뇌공학과,Department of Bio and Brain Engineering,Bio and Brain Engineering,Brain and Cognitive Engineering
+ID,산업디자인학과,Department of Industrial Design,,,,Industrial Design
+CBE,생명화학공학과,Department of Chemical and Biomolecular Engineering,,,,Chemical and Biomolecular Engineering
+MS,신소재공학과,Department of Materials Science and Engineering,,,,Materials Science and Engineering
+EE,전기및전자공학부,School of Electrical Engineering,,,,Electrical Engineering
+GSST,반도체공학대학원,Graduate School of Semiconductor Technology,전기및전자공학부,School of Electrical Engineering,Electrical Engineering,Semiconductor Technology
+AIS,인공지능반도체대학원,Graduate School of AI Semiconductor,전기및전자공학부,School of Electrical Engineering,Electrical Engineering,AI Semiconductor
+SSE,반도체시스템공학과,Department of Semiconductor System Engineering,,,,Semiconductor System Engineering
+CS,전산학부,School of Computing,,,,Computing
+IS,정보보호대학원,Graduate School of Information Security,전산학부,School of Computing,Computing,Information Security
+SEP,소프트웨어대학원프로그램,Software Graduate Program,전산학부,School of Computing,Computing,Software
+ICE,정보통신공학과,Department of Information and Communications Engineering,,,,Information and Communications Engineering
+DMP,디지털미디어프로그램,Digital Media Program ,정보통신공학과,Department of Information and Communications Engineering,Information and Communications Engineering,Digital Media
+IE,산업 및 시스템 공학과,Department of Industrial and Systems Engineering,,,,Industrial and Systems Engineering
+DS,데이터사이언스대학원,Graduate School of Data Science,산업 및 시스템 공학과,Department of Industrial and Systems Engineering,Industrial and Systems Engineering,Data Science
+NQE,원자력 및 양자공학과,Department of Nuclear and Quantum Engineering,,,,Nuclear and Quantum Engineering
+MO,조천식모빌리티대학원,Cho Chun Shik Graduate School of Mobility,,,,Mobility
+AI,김재철AI대학원,Kim Jaechul Graduate School of AI,,,,AI
+PSE,고분자학 학제전공,Polymer Science and Engineering Program,,,,Polymer Science and Engineering
+SPE,우주탐사공학 학제전공,Space Exploration Engineering Program,,,,Space Exploration Engineering
+ENV,환경・에너지공학 학제전공,Environmental and Energy Technology Program,,,,Environmental and Energy Technology
+RE,로봇공학 학제전공,Robotics Program,,,,Robotics
+PD,미래자동차 학제전공,Division of Future Vehicle,,,,Future Vehicle
+STE,반도체 학제전공,Semiconductor Technology Educational Program,,,,Semiconductor Technology
+TE,정보통신공학 학제전공,Telecommunication Engineering Program,,,,Telecommunication Engineering
+GGS,녹색성장지속가능대학원,Graduate School of Green Growth and Sustainability,,,,Green Growth and Sustainability
+MV,메타버스대학원,Graduate School of Metaverse,,,,Metaverse
+HSS,디지털인문사회과학부,School of Digital Humanities and Computational Social Sciences,,,,Digital Humanities and Computational Social Sciences
+GCT,문화기술대학원,Graduate School of Culture Technology,,,,Culture Technology
+STP,과학기술정책대학원,Graduate School of Science and Technology Policy,,,,Science and Technology Policy
+GFS,문술미래전략대학원,Moon Soul Graduate School of Future Strategy,,,,Future Strategy
+IP,지식재산대학원프로그램,Master’s Program in Intellectual Property,문술미래전략대학원,Moon Soul Graduate School of Future Strategy,Future Strategy,Intellectual Property
+SJ,과학저널리즘대학원프로그램,Master’s Program in Science Journalism,문술미래전략대학원,Moon Soul Graduate School of Future Strategy,Future Strategy,Science Journalism
+FS,미래전략대학원프로그램,Master’s Program in Future Strategy,문술미래전략대학원,Moon Soul Graduate School of Future Strategy,Future Strategy,Future Strategy
+BTM,기술경영학부,School of Business and Technology Management,,,,Business and Technology Management
+IT,기술경영학부 (IT경영학),School of Business and Technology Management (IT Business),기술경영학부,School of Business and Technology Management,Business and Technology Management,IT Business
+GDI,글로벌디지털혁신대학원,Graduate School of Global Digital Innovation,기술경영학부,School of Business and Technology Management,Business and Technology Management,Global Digital Innovation
+ITM,기술경영전문대학원,Graduate School of Innovation and Technology Management,기술경영학부,School of Business and Technology Management,Business and Technology Management,Innovation and Technology Management
+BIM,바이오혁신경영전문대학원,Graduate School of Bio Innovation Management,기술경영학부,School of Business and Technology Management,Business and Technology Management,Bio Innovation Management
+MT,경영공학부,School of Management Engineering,,,,Management Engineering
+FIN,금융MBA,Finance MBA,금융전문대학원,Graduate School of Finance,Finance,Finance MBA
+FE,금융공학프로그램,Financial Engineering Program,금융전문대학원,Graduate School of Finance,Finance,Financial Engineering
+DF,디지털금융MBA,Digital Finance MBA,금융전문대학원,Graduate School of Finance,Finance,Digital Finance MBA
+FEM,금융이그제큐티브MBA,Finance Executive MBA,금융전문대학원,Graduate School of Finance,Finance,Finance Executive MBA
+EM,이그제큐티브MBA,Executive MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Executive MBA
+PM,프로페셔널MBA,Professional MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Professional MBA
+TM,테크노경영MBA,Techno-MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Techno-MBA
+SM,사회적기업가MBA,Social Entrepreneurship MBA ,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Social Entrepreneurship MBA
+IMM,정보미디어MBA,Information and Media MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Information and Media MBA
+IM,정보경영프로그램,Information Management Program,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Information Management
+GBP,녹색경영정책프로그램,Green Business and Policy Program,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Green Business and Policy
+KM,카이스트MBA,KAIST MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,KAIST MBA
+IMP,임팩트MBA,Impact MBA,KAIST경영전문대학원,KAIST Graduate School of Business,Business,Impact MBA
+SST,안보과학기술대학원,Graduate School of Advanced Security Science and Technology,,,,Advanced Security Science and Technology

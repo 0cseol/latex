@@ -1,0 +1,51 @@
+% 공통
+\usepackage{xparse} % LaTeX3 언어 핵심 함수 제공 - 함수형 스타일, 내부 처리
+\usepackage{expl3} % exp13 위에 구축된 고급 명령어 정의
+\usepackage[hidelinks]{hyperref} % 참조나 목차에서 하이퍼링크가 가능하게 함
+\usepackage{xifthen} % if 조건문 사용
+
+% 폰트
+\usepackage{luatexko} % 한글 폰트 사용. kotex의 lua 전용 후속 버전
+\usepackage{fontspec} % 글꼴 강제 기울이기(한글 폰트 기울임)
+
+% 색상
+\usepackage{xcolor} % 색상
+\usepackage{transparent} % lua만 됨. xcolor필요
+\usepackage{luacolor,lua-ul} % 한글 형광펜 줄바꿈 등 완전 지원
+
+% 이미지
+\usepackage{graphicx} % 이미지 삽입
+\DeclareGraphicsExtensions{.pdf, .png, .jpg} % 그림 확장자 생략
+\usepackage{subcaption} % 이미지 묶어서 삽입하는 subfigure 사용
+
+% 페이지
+\usepackage{fancyhdr} % 머리말, 꼬리말
+\setlength{\headheight}{18pt} % 헤더 높이 설정
+\usepackage{xr-hyper} % 안쓰는 chapter에서 식 참조(aux 파일)할 때 사용
+\usepackage{import} % main이 chapter 호출, cahpter가 section 호출(main에 대해 상대경로 사용)
+
+% 캡션, 링크
+\usepackage{aliascnt} % 고유 참조 이름(equation, figure 등을 커스텀)
+\usepackage{caption} % 캡션 스타일 조정
+
+%% 수식
+\usepackage{calc} % 너비, 간격 등 계산
+\usepackage{amsmath, amssymb, mathtools} % 본문에서 수학 식 사용
+\usepackage{siunitx} % 단위 표기
+
+% 표, 디자인
+\usepackage{float} % 표/그림 위치 고정
+\usepackage{booktabs} % 표 상단선 등 고급 표 기능
+\usepackage{longtable} % 페이지 넘어가는 긴 표
+\usepackage{tabularx} % 너비 자동 조정 표
+\usepackage{multirow} % 표에서 여러 행 병합
+\usepackage{tikz} % 사각박스, 선긋기(교사용 메모 박스)
+\usetikzlibrary{calc} % tikz에서 cal 사용
+\usepackage{tikzpagenodes} % 사각박스, 선긋기(목차로 이동하는 박스)
+
+
+
+
+
+
+

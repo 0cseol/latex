@@ -1,0 +1,71 @@
+%% 색상, 글자 스타일, 굵기, 문단 정렬, 기본 강조 명령어 등을 정의
+
+%% 색상 정의 % xcolor, transparent 필요
+\definecolor{myblue}{HTML}{1a3fba} % 너무 과하지 않은 색상 조합
+\definecolor{myred}{HTML}{ff0000}
+\definecolor{mygray}{HTML}{666666}
+
+%% 강조 색상 텍스트, b는 볼드체
+\newcommand{\blue}[1]{\textcolor{myblue}{#1}}
+\newcommand{\red}[1]{\textcolor{myred}{#1}}
+\newcommand{\gray}[1]{\textcolor{mygray}{#1}}
+\newcommand{\blueb}[1]{\textcolor{myblue}{\textbf{#1}}}
+\newcommand{\redb}[1]{\textcolor{myred}{\textbf{#1}}}
+\newcommand{\grayb}[1]{\textcolor{mygray}{\textbf{#1}}}
+
+%% 텍스트 스타일 매크로
+\newcommand{\bd}[1]{\textbf{#1}} % 볼드
+\newcommand{\itl}[1]{\ifcsdef{itshape}{\textit{#1}}{\textsl{#1}}} % 이탤릭, 지원 안할시 강제 슬랜트
+
+% 한글은 이탤릭체 지원 안하므로 itl 없다면 강제 slant로 설정. 그러나 잘 안되서 아래에서 \tsl 따로 지정
+\newcommand{\tsl}[1]{\textsl{#1}} % sl은 전역적으로 다 slant 되버림. 영어는 itl 써야 함
+
+%% 형광펜, 강조 스타일 정의 - luacolor,lua-ul 쓰면 매우 강력
+\newcommand{\hly}[1]{\highLight[{[RGB]{255,230,40}}]{#1}} % 노랑
+\newcommand{\hlyb}[1]{\highLight[{[RGB]{255,230,40}}]{\textbf{#1}}} % 노랑볼드
+\newcommand{\hlr}[1]{\highLight[{[RGB]{255,70,70}}]{#1}} % 빨강
+\newcommand{\hlrb}[1]{\highLight[{[RGB]{255,70,70}}]{\textbf{#1}}} % 빨강볼드
+
+% 팬텀 대신 하얀색으로 변경(자리차지용)
+\newcommand{\hlw}[1]{\highLight[{[RGB]{255,255,255}}]{#1}} % 하양
+\newcommand{\hlwb}[1]{\highLight[{[RGB]{255,255,7255}}]{\textbf{#1}}} % 하양볼드
+
+%% biglabel 함수 지정. 볼드체 12pt
+\newcommand{\biglabel}[1]{\textbf{\fontsize{12pt}{12pt}\selectfont #1}}
+
+%% 수동 증가 번호 커맨드 제작. 함수명은 an, bn(괄호), anset, bnset으로 초기화 가능
+\usepackage{enumitem} % 수동증가 번호 카운트
+\newcounter{anumcounter} % an
+\newcommand{\an}{\stepcounter{anumcounter}\theanumcounter.\ }
+\newcommand{\anset}{\setcounter{anumcounter}{0}}
+\newcommand{\ans}{\hspace*{11pt}} % ans는 들여쓰기 효과
+\newcounter{bnumcounter} % bn
+\newcommand{\bn}{\refstepcounter{bnumcounter}\makebox[1.2em][l]{(\arabic{bnumcounter})}\ }
+\newcommand{\bnset}{\setcounter{bnumcounter}{0}}
+\newcommand{\bns}{\hspace*{15.2pt}} % bns는 들여쓰기 효과
+
+%% 글 앞에 찍는 글머리기호 점. bullet은 좀 커서 크기 줄임
+\newcommand{\bul}{\raisebox{0.25ex}{\tiny$\bullet$}\ }
+\newcommand{\bls}{\hspace*{6pt}} % bls는 들여쓰기 효과
+
+%% 여러 줄도 가능한 가운데 정렬 텍스트 매크로
+\newcommand{\centertext}[1]{\par\vspace{-1.9em}{\centering #1 \\}}
+
+%% 줄 간격 설정
+\linespread{1.2}             % 전체 줄간격 약간 넓힘
+
+%% 기본 단락 여백 제거 - 문단 설정
+\setlength{\parskip}{0.5em} % 문단사이 간격 글자높이의 절반만큼 띄우기(기본값 0)
+\setlength{\parindent}{0pt} % 문단 첫 들여쓰기 없음(글자 너비 절반인 0.5em 해도 됨)
+
+%% 긴 URL, 저자명의 경우 줄바꿈
+\PassOptionsToPackage{hyphens}{url}  % url 패키지에 옵션만 전달
+\Urlmuskip=0mu plus 1mu
+
+%% 영어 하이픈 자동 삽입
+\usepackage[english]{babel}
+\pretolerance=100           % 1차 시도: 띄어쓰기만으로 줄맞춤 (낮을수록 더 많이 줄바꿈)
+\tolerance=500              % 2차 시도: 하이픈·늘림 포함 줄맞춤 (높을수록 더 많이 사용)
+\emergencystretch=1em       % 최후: 여백 추가로 억지 줄맞춤
+\hyphenpenalty=1000         % 자동 하이픈을 거의 안 씀 (값이 높을수록 하이픈을 덜 씀)
+\exhyphenpenalty=50         % 수동 하이픈(\-)은 비교적 잘 씀

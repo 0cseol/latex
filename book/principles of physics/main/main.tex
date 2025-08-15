@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt]{book}
+\input{../../structure/preamble.tex} % preamble(defs) 호출. 두 단계 올라가서 다시 내려옴
+%\setupBib % 참고문헌 있을 시 주석 해제
+\seolfmode = 4 % 모드 변경 - 1 출판용, 2 학생빈칸, 3 해답, 4 교사메모포함
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 문서 시작
+\begin{document}
+\linkbox % 언제나 목차로 이동하는 링크박스를 모든 페이지 하단에 삽입
+\nopagenumber % 아직 페이지 넘버 표시하지 않기
+
+\includeHead{title} % 타이틀
+%\includeHead{preface} % 서문
+\includeHead{toc} % 목차
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 본문
+\newgeometry{top=25mm, bottom=25mm, inner=20mm, outer=60mm} % 학습지처럼 inner, outer로 여백 변경
+\drawlinestrue % outer에 선 긋기 - inner, outer 있는 경우만 활용
+\cleardoublepage % 양면인쇄를 위해 챕터를 포함한 plane 형식 문서가 오른쪽(홀수)로 시작되도록 함
+
+\setcounter{page}{1} % 1페이지로 시작 - 변경 가능
+\pagenumber % 지금부터 페이지 넘버 표시
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 챕터
+%\loadchapter{00} % 설명문
+\hiddenchapter{14} % 참조용 hidden
+\setcounter{chapter}{17} % chapter를 17까지 카운트
+\subimport{../chapters/18/}{chapter.tex}
+\subimport{../chapters/19/}{chapter.tex}
+\subimport{../chapters/20/}{chapter.tex}
+
+\chaptercover{principles of physics}{seol} % chapter에서 마감하는 경우 커버
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 챕터 끝
+\newpage
+\drawlinesfalse % outer에 선 긋기 중단
+\restoregeometry % 학습지 형식 용지 설정 끝. 기본용지로 변경
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 부록 있을 시 주석 해제
+\appendix % 한 번만 선언(글 형식 바뀜)
+%\input{../appendix/appendix01.tex}
+%\input{../appendix/appendix02.tex}
+%\printBib % 참고문헌 있을 시 주석 해제
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 문서 끝
+\end{document}

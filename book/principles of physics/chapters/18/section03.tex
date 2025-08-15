@@ -1,0 +1,379 @@
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thermal Expansion}
+\memo{section: 열팽창}%
+\ 모든 물체는 온도에 따라 크기가 변한다.
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Thermal Expansion}
+\memo{sub: 열팽창}%
+\ 온도 상승에 따른 \hly{열팽창}은 주위에서 흔히 볼 수 있다.
+\seolight{한여름}에 철로가 팽창하여 휘지 않도록 철로의 \seolight{간격}은 약간 떨어져 있지만,
+\seolight{한겨울}에 지나치게 수축하여 기차가 \seolight{이탈할 위험}도 있다.
+따라서 정확한 특징 파악과 계산이 필요하다.
+
+%% Fig. 콩코드 비행기
+\concorde
+\memo{콩코드 비행기(\autoref{fig:concorde})가 음속보다 빨리 날면 공기에 의한 마찰로
+열팽창이 일어나서 길이가 \seolight{$12.5\,\mathrm{cm}$나 늘어난다}.
+(비행기의 앞부분은 \seolight{$128\,^\circ\mathrm{C}$},
+비행기의 꼬리 부분은 $90\,^\circ\mathrm{C}$이고,
+객실의 유리창을 만지면 상당히 따뜻하다).}%
+\ 콩코드 비행기(\autoref{fig:concorde})는 \seolight{초음속 비행}이 가능하기 때문에
+공기에 의한 \seolight{마찰열}이 많이 발생하므로 \seolight{기체의 열팽창}을 고려해야 한다. \\
+
+%% Fig. 바이메탈
+\bimetalstrip
+\memo{(a) 온도 $T_0$에서 \seolight{황동과 강철}이 용접되어 붙어 있는 금속이중띠.
+(b) 이 기준온도보다 온도가 올라가면 띠는 그림처럼 휘어지고,
+내려가면 위로 휘게 된다. 많은 검온계가 이 원리로 작동하여
+온도의 증감에 따라 전기 접촉을 끊거나 잇는다. \\
+ \\
+보통 그대로 \seolight{바이메탈}이라고 부른다.}%
+\ 금속이중띠(\autoref{fig:bimetal_strip})는 팽창이나 수축하는 길이가 다르기 때문에 휘어진다.
+\begin{sssbox}
+\ 황동과 강철 중에 온도가 변할 때 더 많이 변하는 것은 \seolfa{황동}이다.
+잘 변하고 변하지 않은 정도를 \hly{팽창계수}로 나타낼 수 있다.
+팽창계수가 더 큰 것은 \seolfa{황동}이다.
+\ \seolight{알코올 온도계}의 경우 알코올의 열에 의한 팽창으로 온도를 확인할 수 있다.
+이때, \seolight{유리는 팽창}하지 않는가? 어떻게 해야 \seolight{정확한 온도계}를 만들 수 있을까?
+\end{sssbox}
+\memo{두 물질의 팽창을 종합적으로 고려하여 눈금을 작성한다. \\
+\seolight{황동(brass)}은 \seolight{구리와 아연}의 합금으로
+\seolight{놋쇠}라고 부르기도 한다. \\
+합금 정도에 따라 성질이 조금씩 달라질 수도 있지만
+구리7:아연3의 \seolight{칠삼황동을 대표}값으로 나타낸다.}%
+\clearpage
+
+
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Linear Expansion}
+\memo{subsub: 선팽창}%
+\ 길이가 $L$인 금속막대의 온도가 $\Delta T$만큼 올라간다면 길이 변화는 다음과 같다.
+%% eq box. 선팽창
+\begin{eqbox} \Delta L = L \alpha \Delta T
+\label{eq:linear_expansion} \end{eqbox}
+\ 여기서 $\alpha$는 \hly{\bd{선팽창계수}}라고 한다.
+차원을 분석하면 선팽창계수는 \seolfa{$\mathrm{K}^{-1}$}의 단위를 갖는다.
+선팽창계수는 \hly{단위온도 변화당 길이 변화의 비율}을 의미한다.
+\begin{sssbox}
+\memo{이 책에서는 초기 길이를 $L$이라고 함. \\
+\seolight{$L_0$으로 생각}하는 것이 나중에 안 헷갈릴수도 있으니 초기 길이를 $L_0$로 쓸 것임. \\
+또한 길이는 \seolight{소문자 $l$}로 나타낼 것임. \\
+ \\
+\seolight{온도 차이}에 곱하므로, 선팽창계수의 단위는 섭씨온도, 절대온도 무엇을 써도 상관 없다. \\
+ \\
+\seolight{열수축}이라는 게 있을까? \\
+그냥 $\Delta L = L \alpha \Delta T$ (\autoref{eq:linear_expansion})에서 \\
+\seolight{$\Delta T < 0 $}임. 그대로 감소하는 것.}%
+처음 길이를 $l_0$, 나중 길이를 $l$이라고 하고, $l$에 대해 정리하면 다음을 얻는다.
+\begin{equation*} l = l_0 + \Delta l = l_0(1 + \alpha T) \end{equation*}
+\end{sssbox}
+
+\begin{checkbox*}
+겨울에 철로를 매설하며 여름에 늘어날 것을 대비하고자 한다.
+철로 한 구간의 길이는 \seolight{$10\,\mathrm{m}$}일 때 얼마의 간격으로 철로를 매설해야 할까?
+(단, 겨울의 온도는 \seolight{$-10\,^\circ\mathrm{C}$}이고,
+여름의 최대 온도는 \seolight{$40\,^\circ\mathrm{C}$}이다.
+철의 선팽창계수는 \seolight{$11 \times 10^{-6}/\mathrm{C}^\circ$}이다.)
+\end{checkbox*}
+
+\begin{solbox}
+\bnset
+\bd{Sol: }
+%% Fig. 철로의 열팽창
+\seolfig[0.8]{thermal_expansion_of_rails}
+\bn $10\,\mathrm{m}$ 막대기를 배치할 때, 틈을 $x$라고 하면, 두 가지 방법으로 생각할 수 있다. \\
+\bns \bul \seolight{왼쪽을 모두 고정}시키고 반대쪽(오른쪽)만 늘어난다. \\
+\bns \bul 양쪽이 똑같이 늘어서 늘어난 길이를 \seolight{절반 나누지만}, \\
+\bns \bls 두 막대가 가까워지므로 \seolight{다시 2를 곱한다}. 즉, \seolight{위와 같다}. \\
+\bn $\Delta l = l_0 \alpha \Delta T$에서
+$\Delta l = 10 \times 11 \times 10^{-6} \times \seolight{50}
+= 5.5 \times 10^{-3}\,(\mathrm{m})$이다. \\
+\bd{Ans: } $5.5\,\mathrm{mm}$
+\end{solbox}%
+\vspace{-10pt}%
+\memo{(a) Room temperature values except for the listing for ice. \\
+(b) This alloy was designed to have a low coefficient of expansion.
+The word is a shortened form of “invariable.” \\
+(a) 얼음을 제외하고는 \seolight{실온}에서의 값이다. \\
+(b) \seolight{인바 합금}의 팽창계수는 \seolight{낮다}.
+인바(Invar)는 영어 \seolight{``invariable''}의 약어이다. \\
+ \\
+유리도 어떻게 만든 유리인지에 따라 성질이 달라질 것이다. \\
+\seolight{일반적으로 사용되는 유리를 대표값}으로 한다.}%
+\addlines{1}
+%% Tab. 선팽창계수의 예
+\somecoefficientsoflinearexpansion
+\ \autoref{tab:some_coefficients_of_linear_expansion}\은 여러 물질에서
+선팽창계수가 얼마인지를 나타낸 것이다.
+\clearpage
+
+
+
+%% Fig. 자의 팽창
+\thermalexpansionofaruler
+\memo{서로 다른 온도에서 강철로 만든 자.
+자가 팽창하면 그 위의 척도, 숫자, 자의 두께, 원과 원형 구멍의 지름 등은
+\seolight{모두 동일한 비율로 늘어난다}(팽창되었음을 보이기 위해 과장되게 그렸다).}%
+\ \autoref{fig:thermal_expansion_of_a_ruler}\은 자의 열팽창을 나타낸 것이다.
+\hly{사진을 확대}한 것과 비슷하다. 구멍을 뚫으면서 생긴 원판은 자에 딱 맞고,
+자와 원판의 온도가 같이 올라갈 때 원판은 \seolight{여전히 구멍에 딱 맞게} 된다.
+\begin{sssbox}
+\memo{\seolight{휴대폰으로 확대하듯} 그대로 커진다. \\
+안으로 부풀듯이 그린 학생들이 굉장히 많음.
+위의 \seolight{자 그림처럼 꽉 찬 금속} 덩어리에 \seolight{매직으로 그림}을 그리고
+\seolight{마지막에 잘라낸다고 생각}해도 됨}%
+2023학년도 광주과학고등학교 입학전형 2단계 2교시(과학영역) 2번 문제 \\
+일부가 끊긴 원 모양의 금속 고리를 가열할 때, 변한 금속 고리의 모양은?
+%% Fig. 세 가지 선형 온도척도
+\quickfig[0.3]{open-ended_metal_ring}
+\end{sssbox}
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Area Expansion}
+\memo{subsub: 면팽창 \\
+면팽창은 잘 다루지 않음. 일반물리학 교재에서도 면팽창은 없음.
+\seolight{면팽창계수}는 부피팽창계수와 같은 이유로 \seolight{선팽창의 2배}가 됨.}%
+\ 물체가 늘어난 면적은 처음 면적과 온도 변화의 곱에 비례한다.
+
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+\subsubsection{Volume Expansion}
+\memo{subsub: 부피팽창}%
+\ 고체의 경우 온도에 따라 모든 방향으로 팽창하기 때문에 부피가 늘어난다.
+액체의 경우는 부피팽창만 의미가 있다.
+부피가 $V$인 고체나 액체의 온도가 $\Delta T$만큼 올라갈 때 부피 변화는 다음과 같다.
+%% eq box. 부피팽창
+\begin{eqbox} \Delta V = V \beta \Delta T
+\label{eq:volume_expansion} \end{eqbox}
+\memo{선팽창과 마찬가지로 이 식에서는 초기 부피를 $V$이라고 함. \\
+\seolight{$V_0$으로 생각}하는 것이 나중에 안 헷갈릴 수도 있음 \\
+ \\
+선은 $\alpha$, \seolight{부피는 $\beta$}를 씀. \\
+면은 건너뛴 것임. $\gamma$ 쓰거나 $\beta$에 첨자를 붙여서 면팽창을 나타내기도 함}%
+\ 선팽창과 마찬가지로 팽창계수가 있고, $\beta$는 \hly{부피팽창계수}라고 한다.
+부피팽창계수와 선팽창계수 사이에는 다음의 관계가 있다.
+%% eq box. 부피팽창과 선팽창의 관계
+\begin{eqbox} \beta = 3 \alpha
+\label{eq:volume–linear_expansion_relation} \end{eqbox}
+\clearpage
+
+
+
+\begin{sssbox}
+\memo{\seolight{\autoref{eq:linear_expansion}은 초기 길이가 $L$}임에 유의 \\
+\seolight{$\Delta L = L_0 \alpha \Delta T$} \\
+$\Delta L = L - L_0$ 연립}%
+간단하게 $\beta = 3 \alpha$임을 보이자. \\
+\bnset
+\bn 선팽창 식 \autoref{eq:linear_expansion}에서 나중 길이는
+$l =$ \seolfa{$l_0 (1 + \alpha \Delta T)$}이다. \\
+\bn 세 변의 길이를 각각 $a + \Delta a$ ,\, $b + \Delta b$ ,\, $c + \Delta c$라고 하면 \\
+\bns 부피 변화는 다음과 같이 나타낼 수 있다. \\
+\vspace{-22pt}%
+\memo{$\Delta a$의 값은 \seolight{매우 작아서}
+\seolight{두 번} 곱한 값은 \seolight{무시(근사)} \\
+\seolight{테일러 급수전개로 근사}하는 것과 같음.}%
+\begin{align*}
+     \Delta V &= \seolfb{$(a + \Delta a)(b + \Delta b)(c + \Delta c) - abc$} \\
+     &\approx \seolfb{$ab \Delta c + bc \Delta a + ca \Delta b$} \\
+     &= \seolfb{$3abc \,\alpha \Delta T = V_0 \cdot 3\alpha \cdot \Delta T
+     = V_0 \cdot \beta \cdot \Delta T$}
+\end{align*}
+\vspace{-22pt}%
+
+\bn 비등방성 재료(결정 구조 방향에 따라 다른 팽창률)에서는 \\
+\bns $\Delta V = V_0 (\alpha_x + \alpha_y + \alpha_z) \Delta T$가 된다.
+\end{sssbox}
+
+\begin{checkbox}
+The figure here shows four rectangular metal plates,
+with sides of \seolight{$L$}, \seolight{$2L$}, or \seolight{$3L$}.
+They are all made of the same material,
+and their temperature is to be increased by the same amount. \\
+Rank the plates according to the expected increase in \\
+(a) their \seolight{vertical heights} and \\
+(b) their \seolight{areas}, greatest first. \\
+\memo{오른편 그림처럼 변의 길이가 각각 \seolight{$L$}, \seolight{$2L$},
+\seolight{$3L$}인 직사각형 금속판이 있다.
+각 판은 모두 동일한 재질로 들었고, 온도가 동일하게 증가한다고 하자. \\
+(a) 수직 방향 \seolight{높이의 증가}와 \\
+(b) \seolight{면적의 증가}가 가장 큰 순서대로 각각 나열하여라.}%
+
+%% Fig. 네 개의 강철 판
+\quickfig{four_rectangular_metal_plates}
+\end{checkbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn 높이를 보면 $2L$, $3L$, $3L$, $L$인 듯함 \\
+\bns 처음 크기에 비례하여 커지므로, 높이 증가는 2 = 3 > 1 > 4 \\
+\bn 면적은 $2L^2$, $3L^2$, $6L^2$, $2L^2$인 듯함 \\
+\bns 처음 크기에 비례하여 커지므로, 면적 증가는 3 > 2 > 1 = 4 \\
+\bd{Ans(a): } 2 = 3 > 1 > 4 \\
+\bd{Ans(b): } 3 > 2 > 1 = 4
+\end{solbox}
+
+\ 액체는 그릇에 담는다. 따라서 액체가 팽창할 때는 그릇(고체)의 팽창을 함께 고려해야 한다.
+우리가 눈으로 관찰하는 팽창은 액체만의 실제 팽창에서 그릇의 팽창을 뺀 \hly{겉보기 팽창}이다.
+
+\begin{sssbox}
+\hly{열팽창과 밀도}의 관계는 어떻게 나타낼 수 있을까? \\
+온도가 상승해도 질량 $m = \rho_0 V_0 = \rho V $는 변하지 않는다.
+\vspace{-8pt}%
+\begin{align*}
+    V &= V_0 (1 + \beta \Delta T) \\
+    \frac{m}{\rho} &= \frac{m}{\rho_0} (1 + \beta \Delta T) \\
+    \rho &= \rho_0 \frac{1}{1 + \beta \Delta T} ~ \approx ~ \rho_0(1 - \beta \Delta T)
+\end{align*}
+\memo{\seolight{$\beta \ll 1$에서 테일러 급수전개} 하였음 \\
+\seolight{밀도}는 온도가 증가하면 \seolight{반대로 작아진다}.(팽창하니까)}%
+따라서 밀도 변화는 $\Delta \rho = \rho - \rho_0 =$ \seolight{$-$} $\rho_0 \beta \Delta T$이다.
+\end{sssbox}
+\clearpage
+
+
+
+\begin{practicebox}{Thermal expansion on the Moon}
+%% Fig. 아폴로15
+\apollofifteen
+When Apollo 15 landed on the Moon at the foot of
+the Apennines mountain range, an American flag was
+planted (\autoref{fig:apollo_fifteen}).
+The aluminum, telescoping flagpole
+was \seolight{$2.0\,\mathrm{m}$} long with a coefficient of linear expansion
+\seolight{$2.3 \times 10^{-5}\,/^\circ\mathrm{C}$}. At that latitude on the Moon
+($26.1\,^\circ\mathrm{N}$), the temperature varied from \seolight{$290\,\mathrm{K}$}
+in the day to \seolight{$110\,\mathrm{K}$} in the night.
+What was the \seolight{change in length} of the pole between day and night? \\\vspace{-12pt}%
+\memo{달 위의 열팽창 \\
+ \\
+Apollo 15호가 달의 Apennines 산맥 기슭에 도착하여 미국 국기를 꽂았다
+(\autoref{fig:apollo_fifteen}). 망원경이 장착되어 있는 알루미늄 깃대의
+길이는 \seolight{$2.0\,\mathrm{m}$}이고, 
+선팽창률은 \seolight{$2.3 \times 10^{-5}\,/^\circ\mathrm{C}$}이다.
+이 위도($26.1\,^\circ\mathrm{N}$)의 달에서 온도는 낮에는
+\seolight{$290\,\mathrm{K}$}, 밤에는 \seolight{$110\,\mathrm{K}$}로 변한다.
+낮과 밤 사이에 깃대의 \seolight{길이 변화}는 얼마인가?}%
+\end{practicebox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+$L_0 = 2.0\,\mathrm{m}$ ,\,
+$\alpha = 2.3 \times 10^{-5}\,/\mathrm{K}$ ,\,
+$\Delta T = 180\,\mathrm{K}$이므로, \\
+\solight{$\Delta L = L_0 \alpha \Delta T$}에서,
+$8.28 \times 10^{-3}\,\mathrm{m}$이다. \\
+\bd{Ans: } $8.28 \times 10^{-3}\,\mathrm{m}$
+\end{solbox}
+
+\begin{practicebox}{The shrinking fuel load}
+On a hot day in Las Vegas, a fuel trucker loaded \seolight{$\num{37000}\,\mathrm{L}$}
+of diesel fuel. He encountered cold weather on the way to
+Payson, Utah, where the temperature was \seolight{$23.0\,\mathrm{K}$} lower
+than in Las Vegas, and where he delivered his entire load.
+How many liters did he deliver? The coefficient of volume expansion
+for diesel fuel is \seolight{$\beta = 9.50 \times 10^{-4}\,/\mathrm{C}^\circ$},
+and the coefficient of linear expansion for his steel tank is
+\seolight{$\alpha = 11 \times 10^{-6}\,/\mathrm{C}^\circ$}. \\\vspace{-12pt}%
+\memo{부피 열팽창 \\
+ \\
+무더운 날 유류 수송차량 운전기사가 라스베이거스에서
+\seolight{$\num{37000}\,\mathrm{L}$}의 경유를 싣고 유타 주의 페이손으로 배달을 갔다.
+페이손에서는 날씨가 쌀쌀해서 라스베이거스보다 온도가 \seolight{$23.0\,\mathrm{K}$}
+낮았다면, 배달된 경유는 몇 리터인가?
+경유의 부피 팽창계수는 \seolight{$9.50 \times 10^{-4}\,/\mathrm{C}^\circ$}이고,
+트럭의 강철 탱크의 선팽창 계수는
+\seolight{$11 \times 10^{-6}\,/\mathrm{C}^\circ$}라고 하자. \\
+ \\
+겉보기 팽창 문제가 아니다.}%
+\end{practicebox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bn 온도가 낮아져서 경유의 부피가 감소한다. \\
+\bns 이때, \solight{강철 탱크 역시 부피가 감소}한다. \\
+\bns 그러나 경유의 배달과 강철 탱크의 부피는 \solight{상관 없다}.
+(경유 부피 변화만 고려) \\
+\bn 경유의 변화량은 \solight{$\Delta V = V_0 \beta \Delta T$}에서 \\
+\bns $\Delta V = (\num{37000}\,\mathrm{L})(9.50 \times 10^{-4}/\mathrm{K})(-23.0\,\mathrm{K}) = -808.45\,\mathrm{L}$ \\
+\bn 배달된 양은 $\num{37000} - 808.45 = \num{36191.5}\,\mathrm{L}$이다. \\
+\bd{Ans: } $3.62 \times 10^4 \,\mathrm{L}$
+\end{solbox}
+\clearpage
+
+
+
+\begin{practicebox*}{자의 선팽창}
+\autoref{tab:some_coefficients_of_linear_expansion}\을 참고하면,
+\seolight{강철(Steel)}의 선팽창계수는 \seolight{$11 \times 10^{-6}\,/\mathrm{C}^\circ$},
+\seolight{황동(Brass)}의 선팽창계수는 \seolight{$19 \times 10^{-6}\,/\mathrm{C}^\circ$}이다.
+\seolight{$0\,^\circ\mathrm{C}$}에서 정확히 눈금을 맞춘 강철 자로
+\seolight{$30\,^\circ\mathrm{C}$}일 때 황동 막대의 길이를
+\seolight{$100\,\mathrm{cm}$}로 측정하였다.
+\seolight{$0\,^\circ\mathrm{C}$}에서 황동 막대의 길이는 얼마인가?
+\end{practicebox*}
+\vspace{3cm}%
+
+\begin{practicebox*}{유리그릇 속 액체}
+\autoref{tab:some_coefficients_of_linear_expansion}\을 참고하면,
+\seolight{유리(Glass)}의 선팽창계수는 \seolight{$9 \times 10^{-6}\,/\mathrm{C}^\circ$}이다.
+부피팽창계수가 \seolight{$2 \times 10^{-4}\,/\mathrm{C}^\circ$}로 유지되는 액체가
+유리그릇에 담겨있다. \\
+\memo{물만 봐도 {$20\,^\circ\mathrm{C}$},
+{$100\,^\circ\mathrm{C}$}일때 팽창계수 몇 배로 달라짐 \\
+약 \seolight{$2.07 \times 10^{-4}\,/\mathrm{C}^\circ$} \\
+약 \seolight{$6.9 \times 10^{-4}\,/\mathrm{C}^\circ$} \\
+계속 일정하게 유지된다고 가정하자.}%
+\anset
+\an \seolight{$20\,^\circ\mathrm{C}$}에서 부피가
+\seolight{$1\,\mathrm{m^3}$}인 정육면체 모양의 유리그릇에 액체가 가득 들어 있다. \\
+\ans 액체와 그릇의 온도를 함께 \seolight{$100\,^\circ\mathrm{C}$}로 올리면 각각 부피가 얼마가 되는가? \\
+\an \seolight{$100\,^\circ\mathrm{C}$}에서 부피가
+\seolight{$1\,\mathrm{m^3}$}인 정육면체 모양의 유리그릇에 액체가 가득 들어 있다. \\
+\ans 액체와 그릇의 온도를 함께 \seolight{$20\,^\circ\mathrm{C}$}로 내리면 각각 부피가 얼마가 되는가?
+\end{practicebox*}
+\vspace{3cm}%
+
+\begin{practicebox*}{팽창 보정 장치}
+온도가 변하더라도 떨어진 두 점의 거리가 일정하게 하는 방법은 선팽창계수가 다른 두 막대의 한쪽 끝을
+결합하는 것이다. 금속 \seolight{A}의 질량은 $m_\text{A}$, 선팽창계수는 $\alpha_\text{A}$이고,
+금속 \seolight{B}의 질량은 $m_\text{B}$, 선팽창계수는 $\alpha_\text{B}$이다.
+%% Fig. 팽창 보정 장치
+\quickfig{thermal_compensation_device}
+\anset
+\an 온도변화에 따라 길이 $L$이 변하지 않기 위한 조건을 구하시오. \\
+\an 물질 \seolight{A는 황동}, 물질 \seolight{B는 강철}이다.
+\seolight{$0\,^\circ\mathrm{C}$}에서 황동의 길이가
+\seolight{$250\,\mathrm{cm}$}이면 \\
+\ans $L$은 얼마인가?
+\end{practicebox*}
+\clearpage
+
+
+
+\insertTeacherPages
+{ % 교사용 페이지 1 시작
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bd{Ans: } 
+\end{solbox}
+
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bd{Ans: } 
+\end{solbox}
+} % 교사용 페이지 1 끝
+{ % 교사용 페이지 2 시작
+\begin{solbox}
+\bnset
+\bd{Sol: } \\
+\bd{Ans: } 
+\end{solbox}
+} % 교사용 페이지 2 끝
+\clearpage

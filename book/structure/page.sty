@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 보통 페이지
+
+% 학습지용 양단 선 긋기. tikz 필요
+\usetikzlibrary{backgrounds}
+\newif\ifdrawlines
+\drawlinesfalse
+\AddToHook{shipout/background}{%
+  \ifdrawlines
+    \begin{tikzpicture}[remember picture, overlay]
+      \ifodd\value{page}
+        \draw[gray, line width=1pt] 
+          ([xshift=-55mm,yshift=-20mm]current page.north east) -- 
+          ([xshift=-55mm,yshift=20mm]current page.south east);
+      \else
+        \draw[gray, line width=1pt] 
+          ([xshift=55mm,yshift=-20mm]current page.north west) -- 
+          ([xshift=55mm,yshift=20mm]current page.south west);
+      \fi\end{tikzpicture}\fi}
+
+% 페이지 번호 제거 함수. nopagenumber
+\newcommand{\nopagenumber}{
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}}
+  \fancypagestyle{fancy}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}}
+  \pagestyle{fancy}}
+
+% 페이지 번호 표시. pagenumber.
+\newcommand{\pagenumber}{
+  \fancypagestyle{plain}{ % plain이든 fancy든 모두 작동하도록 함
+    \fancyhf{} % 초기화 먼저
+    \fancyfoot[LE]{\hspace*{-5mm}\thepage} % 짝수는 왼쪽에서 더 밀기
+    \fancyfoot[RO]{\thepage\hspace*{-5mm}} % 홀수는 오른쪽에서 더 밀기
+    \renewcommand{\headrulewidth}{0pt}} % 상단 선 지우기
+  \fancypagestyle{fancy}{ 
+    \fancyhf{}
+    \fancyfoot[LE]{\hspace*{-5mm}\thepage}
+    \fancyfoot[RO]{\thepage\hspace*{-5mm}}
+    \renewcommand{\headrulewidth}{0pt}}
+  \pagestyle{fancy}}
+
+% 여기서부터 페이지 번호를 1로 설정하는 명령
+\newcommand{\resetpagenumber}{\setcounter{page}{1}}
+
+% 페이지 하단의 꼬릿말 위치에 하이퍼링크(목차로 이동) 박스를 추가하는 명령. tikz, hyperref 필요
+\newcommand{\linkbox}{
+  \AddToHook{shipout/background}{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=south west, inner sep=0pt] at ([yshift=15mm]current page.south west) {%
+        \hyperlink{toc}{\phantom{\rule{\paperwidth}{5mm}}}};
+    \end{tikzpicture}}}
+
+% 여백 균등조절 자동으로 하지 않음.
+% book의 경우 어느 정도 양이 차면 아래에 붙고 균등분배되는데 그것을 해제하는 것
+% 다른 요소가 영향 미치고 간섭할 수 있음
+\raggedbottom
+
+% 페이지 애매하게 넘어갈 경우 addlines으로 한 두줄 강제로 확대함. 현재 페이지만 적용됨
+\newcommand{\addlines}[1]{\enlargethispage{#1\baselineskip}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% chapter 형식 변경
+
+%% chapter 타이틀 글자 너무 아래로 내리지 않게 살짝 올림
+\makeatletter
+% 번호 있는 챕터(\chapter{})의 제목 위치를 위로 올림
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{-5pt} % 페이지 상단에서 챕터 제목까지 간격 줄이기
+  {\parindent \z@            % 문단 들여쓰기 제거
+   \raggedright \normalfont  % 왼쪽 정렬, 일반 글꼴
+   \huge\bfseries \@chapapp\space \thechapter % 'Chapter 1' 등의 챕터 번호 출력
+   \par\nobreak              % 문단 끝 + 줄 바꿈 금지
+   \vskip 20pt               % 챕터 번호와 제목 사이 간격
+   \Huge \bfseries #1\par\nobreak % 제목 본문
+   \vskip 40pt}}               % 제목 아래 본문과의 간격
+% 번호 없는 챕터(\chapter*{})의 제목 위치를 위로 올림 (예: contents, appendix 등)
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{-5pt} % 페이지 상단에서 챕터 제목까지 간격 줄이기
+  {\parindent \z@            % 문단 들여쓰기 제거
+   \raggedright \normalfont  % 왼쪽 정렬, 일반 글꼴
+   \Huge\bfseries #1\par\nobreak % 제목 본문
+   \vskip 40pt}}               % 제목 아래 본문과의 간격
+\makeatother
+
+%% 챕터 번호매김 - 0이면 chapter, 1이면 section, 2면 subsecion ,,,, 까지 번호매김
+\setcounter{secnumdepth}{1} 
+
+%% section 변경
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}
+  {-3.25ex\@plus -1ex \@minus -.2ex} % 제목 위 여백
+  {1.5ex \@plus .2ex} % 제목 아래 여백
+  {\normalfont\fontsize{17pt}{17pt}\bfseries\selectfont}} % 글자 크기, 줄간격, 굵게
+\makeatother
+
+%% subsection 변경(* 붙이고*(선택) 글자 크기 변경)
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}
+  {-3.25ex\@plus -1ex \@minus -.2ex}
+  {1.5ex \@plus .2ex}
+  {\normalfont\fontsize{15pt}{15pt}\bfseries\selectfont}}
+%\let\oldsubsection\subsection % 기호 *을 앞에 붙이도록 함
+%\renewcommand{\subsection}[1]{\oldsubsection{*\hspace{2pt}#1}}
+\makeatother
+
+%% subsubsection 변경(* 붙이고*(선택) 글자 크기 변경)
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}
+  {-3.25ex\@plus -1ex \@minus -.2ex}
+  {1.5ex \@plus .2ex}
+  {\normalfont\fontsize{12pt}{12pt}\bfseries\selectfont}}
+\let\oldsubsubsection\subsubsection % 기호 *을 앞에 붙이도록 함
+\renewcommand{\subsubsection}[1]{\oldsubsubsection{*\hspace{2pt}#1}}
+\makeatother

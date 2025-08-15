@@ -1,0 +1,43 @@
+% 목차 스타일 조정 (기본 클래스 구조 사용)
+\makeatletter
+
+% Chapter 항목 스타일 (목차에서 챕터 모양 조정)
+\renewcommand{\l@chapter}[2]{%
+  \addpenalty{-\@highpenalty} % 페이지 분리 방지하도록 높은 penalty 부여
+  \vskip 1em % 챕터간 간격
+  \@tempdima=2.3em % chapter 번호 이후 추가로 띄어쓰는 정도
+  \parindent \z@ % 단락 들여쓰기 제거
+  \leavevmode
+  \advance\leftskip\@tempdima
+  \hskip -\leftskip
+  \textbf{\Large #1} % 크고 굵은 글씨 (large, Large, Huge 등의 계열이 있음)
+  \nobreak\hfill\nobreak\hb@xt@\@pnumwidth{\hss}\par % 페이지 번호. \hss #2에서 #2 지우고 \hss만 두면 페이지번호 지워짐.
+}
+
+% Section 항목 스타일
+\renewcommand{\l@section}[2]{%
+  \@dottedtocline{1}{1.5em}{2.5em}{#1}{#2}%
+}
+% {level}{indent}{numwidth}{title}{page} - page 지우면 페이지 숫자 안뜸
+
+% Subsection 항목 스타일
+\renewcommand{\l@subsection}[2]{%
+  \@dottedtocline{2}{3.8em}{3.2em}{#1}{#2}%
+}
+
+% 점선 간격 조절
+\renewcommand{\@dotsep}{4} % 기본값 4, 1000 넣으면 점 안보임
+
+% 목차 깊이.0만 쓰면 챕터, 1은 section까지. 2는 subsection
+\setcounter{tocdepth}{1}
+
+\renewcommand{\contentsname}{} % 자동 제목 제거 후 제목 정의
+\chapter*{\hypertarget{toc}{}Contents} % toc 링크를 걸어서 모든 페이지에서 돌아올 수 있도록 함
+\vspace{-5em} % 제목과 떨어진 정도. 너무 많이 떨어져서 음수값 넣음
+
+% TOC 항목은 나오되, 중복된 Contents 챕터 페이지 방지
+\begingroup
+\let\chapter\section % chapter 호출 방지용 (numberline 유지)
+\tableofcontents
+\endgroup
+\makeatother

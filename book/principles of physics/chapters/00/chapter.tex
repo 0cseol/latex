@@ -1,0 +1,339 @@
+%%  chapter  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  subsubection  %%%%%%%%%%%%%%%%
+
+
+%%  chapter  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter
+{Sample Chapter}
+
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{About This Document}
+\memo{바로 글 내용을 쓰는 경우만 메모 활용이 가능함.
+Section 단독으로 쓰는 경우는 빈줄 삽입됨. \\
+아무 말(본문) 없이 메모 쓰면 자리 차지하는 것. 아래 참조}%
+\ 이 chapter는 \hlyb{여러 예시}를 담은 곳이다.\\
+% 참고문헌 사용하고 싶으면 아래 글을 주석 해제
+%\ 이 글은 『Fundamentals of Physics』\cite{halliday12f}, 『Principles of Physics』\cite{halliday12p},『일반물리학』\cite{halliday12p_k}을 참고한 것이다. 이는 일반물리 교재들\cite{halliday12f,halliday12p,halliday12p_k}과 같이 동시에 참조할 수도 있다. \\
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{모드 전환}
+\memo{챕터: 예시용 샘플 챕터 \\ 섹션: 이 문서에 대한 설명 \\\\ 메모는 본문에만 넣어야 편집 상에 간섭이 없습니다.
+줄이 길어지더라도 알아서 메모는 줄바꿈을 하게 됩니다. \\
+메모 뒤에는 반드시 `\% 표시'를 해야 의도치 않은 띄어쓰기를 안할 수 있습니다.}%
+\ 이 책은 기본적으로 \hlyb{네 가지 모드}가 존재하며, 이를 1부터 4까지의 숫자로 구분한다.
+seolfa 함수를 이용하여 모드를 결정하며 1번 모드는 출판용(괄호 없이 전체 나열), 
+\hlr{2번 모드}는 학습용(괄호와 빈칸),
+3번 모드는 정답 배포용(채워진 괄호),
+4번 모드는 교사용으로 (채워진 괄호와 메모)이다. 이를 \seolight{정리하면} 다음과 같다.
+
+\begin{itemize}
+  \item 모드 1 $\Rightarrow$ \seolfa{ 괄호 없는 출판용 }
+  \item 모드 2 $\Rightarrow$ \seolfa{ 괄호와 빈칸으로 채워진 학습용 } \\
+  \bul 모드 3 $\Rightarrow$ \seolfa{ 괄호가 채워진 답안배포용 } \\
+  \bul 모드 4 $\Rightarrow$ \seolfa{ 괄호가 채워지고 메모가 노출되는 교사용 }
+\end{itemize}
+
+\bul 글머리 앞의 작은 기호를 bul로 만들었음 \\
+기존의 item이나 bullet은 크기가 크고 자리를 많이 차지함.
+itemize 역시 틀의 변형이 필요하여 box 및 bullet을 새로 만들었음.
+
+이에 반해, seolb는 seola와 기능이 비슷하나 괄호가 없다. 표 안의 내용 등에 사용된다.
+
+\begin{graybox}
+  \bul 모드 1 $\longrightarrow$ \seolfb{ 출판용 } \\
+  \bul 모드 2 $\longrightarrow$ \seolfb{ 빈칸으로 채워진 학습용 } \\
+  \bul 모드 3 $\longrightarrow$ \seolfb{ 내용이 채워진 답안배포용 } \\
+  \bul 모드 4 $\longrightarrow$ \seolfb{ 내용이 채워지고 메모가 노출되는 교사}용
+  테스트테스트테스트\seolfb{테스트테스트테스트테스트테스트}테스트테스트테스트테스트
+\end{graybox}
+
+
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{페이지 전환}
+\memo{페이지 전환 종류와 방법 설명함}%
+\ 페이지를 넘길 땐 \blue{newpage}와 \red{clearpage}가 있는데,
+\blue{newpage}는 페이지를 새로 생성할 뿐이므로, 그림이나 표가 다음장으로 넘어갈 수 있다.
+이에 반해, \red{clearpage}는 해당 페이지를 기점으로 새로운 페이지가 생성되므로, 확고한 페이지 나눔을 사용할 수 있다.
+따라서, \seolight{\red{clearpage}}로 다음 페이지로 넘어가도록 하겠다.
+\clearpage
+
+
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{Text Formatting}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{글자 모양}
+\memo{섹션: 글자 서식 \\ 여러 가지 글자 모양에 대한 설명}%
+\ 사전에 지정한 매크로를 이용하여 글자색을 나타낼 수 있고, 언제든 .sty에 추가할 수 있다.
+예를 들면, \blue{블루 blue}, \red{레드 red}, \gray{그레이 gray}, \blueb{블루볼드 blueb} \redb{레드볼드 redb} \grayb{그레이볼드 grayb}
+와 같이 나타낼 수 있고, 볼드체와 이탤릭체는 bd, itl으로 나타낼 수 있다.(폰트가 지원하지 않을 수 있으므로 생략한다.) \\
+\ 형광펜을 사용하는 방법은 \hly{형광펜 하이라이트 hly} \hlyb{형관펜 볼드 hlyb}이다. \hlr{빨간색 형광펜 hlr, hlrb}도 사용할 수 있다. \\
+\ 교사용 하이라이트는 \seolight{교사용 seolight}를 사용한다. 모드 4에서만 등장한다.\\
+모드 \solight{3,4에서 나오는 solight}도 있고, 이는 답안용에 해당한다. 
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{자동 넘버링}
+\memo{an, bn 설명}%
+\an\ an은 자동으로 숫자가 증가하는 기능이다. \\
+\an\ 다음 내용을 이렇게 쓰고 \\
+중간에 내용을 적고, 식을 쓰다가 다시 쓰면 이어진다. \\
+\an\ 다시 썼다가, 초기화하고 \\
+\anset
+\an\ 다시 쓰고 \\
+\textbf{\an\ 굵게 지정해서 다시 쓰고} \\
+중간에 내용 적었다가 옆으로도 \an\ 다시 쓰고 \\
+\bn\ bn은 이렇게 쓰고 \\
+\bn\ 다시 쓰고 \\
+\bnset
+초기화 했다가 \\
+\bn\ 다시 쓸 수 있다. \\
+\biglabel{12.} 빅라벨(big label) 사용 방법 \\
+\biglabel{\an} an도 빅라벨 사용 가능함 \\
+\biglabel{가.} 한글 빅라벨도 가능함. 그냥 큰 글씨인 셈 \\
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{글자 배치}
+\memo{글자 정렬 설명}%
+\centertext{여러 줄을 \\ 가운데 정렬하기 위하여 centertext를 사용할 수 있다.\\
+기타 자세한 사항은 example article에 상세히 나와있으니 참고하면 된다.}
+
+\clearpage
+
+\insertTeacherPages % {페이지1}{페이지2}
+{ % 교사용 페이지 1 시작
+이곳은 교사 전용 페이지 1입니다. \\
+insertTeacherPages\{페이지1\}\{페이지2\}로 삽입할 수 있고,
+페이지는 양면이며, seolmode가 3인 경우에만 삽입됩니다. \\
+또한 페이지번호가 무시되어 mode에 따라 전체 틀에 영향을 주지 않습니다.
+} % 교사용 페이지 1 끝
+{ % 교사용 페이지 2 시작
+이곳은 교사 전용 페이지 2 입니다. \\
+반드시 2페이지(양면)을 사용해야만 편집에 영향을 주지 않습니다.
+} % 교사용 페이지 2 끝
+
+
+%%%%  section  %%%%%%%%%%%%%%%%%%%%%%%%%
+\section
+{Box And Table}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Box}
+\memo{섹션: 박스와 표 \\ 서브섹션: 박스 종류와 기능}%
+글자만 \grayinline{박스로} 채우기는 잘 안쓴다. 형광펜을 쓰는 게 더 나아 보임\\
+\begin{graybox}
+회색 박스
+\end{graybox}
+
+\begin{redbox}
+빨간배경 박스 \\
+redbox
+\end{redbox}
+
+\begin{bluebox}
+파란 배경 박스 \\
+bluebox
+\end{bluebox}
+
+\begin{eqbox}
+F = ma ~~~~~ \text{(수식용 eqbox도 있음. equation과 같음)}
+\end{eqbox}
+\vspace{10pt}%
+
+\begin{eqbox}
+a = \frac{F}{m} ~~~~~ \text{\parbox{5.4cm}{(eqbox는 기본 형태가 수식이라, \\\hspace*{1pt} 한글 입력시 text 함수를 써야 한다.)}}
+\end{eqbox}
+\vspace{10pt}%
+
+\begin{checkbox}
+확인문제용 박스(넘버링 됨)도 있다. 본문과 같이 기본 형태가 text이다. \\
+번호는 section 단위로 리셋된다. \\
+수식을 쓰려면 \$을 이용하여 $F=ma$ 와 같이 나타낼 수 있다. \\
+\$을 두개 쓰면 줄바꿈, 가운데 정렬이 되므로, 본문 중간에 넣지 않도록 주의한다.
+\end{checkbox}
+
+\begin{checkbox*}
+*을 붙이면 넘버링이 되지 않는다
+\end{checkbox*}
+
+\begin{practicebox}{여기에 제목을 추가 입력}
+연습문제용 박스도 있음
+\end{practicebox}
+
+\begin{practicebox*}{여기에 제목을 추가 입력}
+*을 붙이면 넘버링이 되지 않는다
+\end{practicebox*}
+
+\begin{practicebox}{넘버링은 자동으로 됨}
+연습문제\\
+풀어보세요
+\end{practicebox}
+
+%%%%%%  subsection  %%%%%%%%%%%%%%%%%%%%
+\subsection{Table}
+\memo{표를 작성하는 방법}%
+간단한 표는 본문 내부에 삽입하지만, 내용이 복잡해지므로 table에 모아두고 참조할 수 있다. \\
+최종 결과는 나중에 보고, 일단 1단계부터 살펴보자. \\
+
+tabular 함수는 표 자체를 만드는 것이고,
+\hly{캡션, 여백까지 모두 갖으려면 table}로 tabular를 감싸야 한다.
+따라서, \hlyb{처음부터 table에 tabular를 넣은 함수를 지정하고 쓰는 것}이 낫다.
+아래는 tabular만을 사용한 예시로, LCR(좌중우)로 정렬하였다.
+표 자체는 기본적으로 왼쪽정렬 된다. \\
+\vspace{-1em}% \\ % 이정도 여백 있어야 적당히 보이는 것 같음
+\begin{tabular}{|L{3cm}|C{3cm}|R{2cm}|} % 열 3개: 폭 3, 3, 5cm 정렬은 LCR, 테두리 있음
+\hline
+\graycell{구분} & \bluecell{내용} & \bluecell{내용} \\
+\hline
+\redcell{경고} & 중요 사항 & \\
+\hline
+\end{tabular}%
+
+\vspace{10pt}%
+이번에도 tabular만 쓴 예시이고, p형태로 셀마다 정렬을 따로하였다.
+표 자체를 가운데 정렬하였다. \\
+\vspace{-2.1em}% % 가운데 정렬시 이정도 여백
+\begin{center}
+\begin{tabular}{|p{4cm}|p{4cm}|}
+\hline
+\raggedright 왼쪽 정렬 & \centering 가운데 정렬 \tabularnewline
+\hline
+\raggedleft 오른쪽 정렬 & \raggedright 다시 왼쪽 정렬 \tabularnewline
+\hline
+\end{tabular}
+\end{center}%
+
+\vspace{10pt}%
+이번엔 table의 요소를 결합한 예시이다. \\
+표에 label을 달기 위해서는 table 안에 tabular를 넣고, caption, label을 쓴다.
+아래 예시에서 캡션을 아래에 썼지만, tabular 위에 쓰면 캡션은 위로 간다.
+\begin{table}[h] % talbe 환경 시작, here
+  \centering % 가운데 정렬
+  \begin{tabular}{|c|c|}
+    \hline
+    항목 & 내용 \\
+    \hline
+    A & 설명 \\
+    \hline
+  \end{tabular}
+  \caption{캡션. 번호는 chapter에 맞게 부여된다.}
+  % \label{tab:example} % 예시이므로 라벨은 따로 만들지 않음.
+\end{table}%
+
+\vspace{10pt}%
+애초에 table의 요소를 모두 넣어서 \hlyb{tab함수}를 만들었다.
+표는 언제나 가운데정렬되며, 예시이므로 참조용 라벨은 비웠다. 캡션은 표 위에 작성된다.
+
+\tab{학생 성적 비교}{}{c c c}{
+이름 & 점수 & 등급 \\
+홍길동 & 95 & A \\
+김철수 & 88 & B
+}
+
+\tab{학생 성적 비교}{}{c | c c}{
+이름 & 점수 & 등급 \\
+\hline
+홍길동 & 95 & A \\
+김철수 & 88 & B
+}
+
+\vspace{10pt}%
+치수를 3cm 등으로 작성하면, 셀의 너비를 지정할 수 있다. 또한 선으로 감쌀 수 있다.
+\tab{전체를 선으로 감싼 표}{}{|L{3cm}|C{3cm}|R{2cm}|}{
+\graycell{구분} & \bluecell{내용} & \bluecell{내용} \\
+\hline
+\rightcell{오른쪽 정렬} & \leftcell{다시 왼쪽 정렬} &
+}
+% 길이 지정은 p,m,b 로만 가능함. 위의 L, C, R은 이미 함수로 지정해놔서 되는 것
+% 즉, |C{4cm}|는 되는데, |C{4cm}|는 안된다.
+% R, L, C는 길이를 지정해서 쓰기 위한 함수로, 새로 만든 함수이다. 
+\tab{다른 제목}{}{|p{4cm}|p{4cm}|}{
+\leftcell{왼쪽 정렬} & 기본 정렬 \\
+\hline
+\rightcell{오른쪽 정렬} & \leftcell{다시 왼쪽 정렬}
+}
+
+\tab{}{}{c}{
+캡션도 라벨도 없는 \\
+단순한 표는 다음과 같이 만들 수 있음
+}
+
+\tab{복잡한 표의 예시}{}{| L{3cm} | c | C{2cm} |}{ % 수치를 안쓰면 대문자 아닌 소문자 c 쓴다. 자동 너비맞춤
+\graycell{구분} & \redcell{내용} & \bluecell{내용} \\
+\hline
+\leftcell{왼쪽} & \centercell{가운데} & \rightcell{오른쪽} \\
+\hline
+\bluecell{\leftcell{왼쪽}} & \graycell{\centercell{가운데}} & \redcell{\rightcell{오른쪽}}
+}
+
+\vspace{10pt}%
+더 나아가서, 표 자체를 선언할 수 있도록 DeclareTable 함수를 만들고,
+tables.tex에 모아두고 참조하여 사용한다. Figure도 마찬가지임.
+
+%% 변환열 예시. 일반물리학 교재에서 가져옴. 라벨은 비워두었음
+\DeclareTable
+  {}
+  {\exampletable}
+  {Some Heats of Transformation}
+  {l S[table-format=4.1] S[table-format=3.1] S[table-format=4.1] S[table-format=4.0]}{
+          & \multicolumn{2}{c}{Melting} & \multicolumn{2}{c}{Boiling}  \\
+          \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+          & {Melting} & {Heat of} & {Boiling} & {Heat of} \\
+          & {Point} & {Fusion} & {Point} & {Vaporization} \\
+Substance & {($\mathrm{K}$)} & {$L_f\,(\mathrm{kJ/kg})$} & {($\mathrm{K}$)} & {$L_v\,(\mathrm{kJ/kg})$} \\
+\hline
+Hydrogen & 14.0  & 58.0  & 20.3   & 455  \\
+Oxygen   & 54.8  & 13.9  & 90.2   & 213  \\
+Mercury  & 234   & 11.4  & 630    & 296  \\
+Water    & 273   & 333   & 373    & 2256 \\
+Lead     & 601   & 23.2  & 2027   & 858  \\
+Silver   & 1235  & 105   & 2323   & 2336 \\
+Copper   & 1356  & 207   & 2868   & 4730}
+
+미리 표를 선언해두고 명령어로 깔끔하게 불러올 수 있음 \\
+\exampletable
+여기서, \hly{S는 소수점 자리를 일치}시키는 것으로, S만 써도 됨 \\
+하지만 소수점이 중심으로 가도록 정렬되므로, 정수만 있다면 정렬이 예쁘지 않음 \\
+table-format=4.1은 \hly{정수 4자리 + 소수점 + 소수 1자리}로 이루어진 배열이고, \\
+가장 마지막 열은 정수만 있으므로 4.0(또는 4)으로 작성하여 정렬하였음. \\
+데이터의 형태를 보고 맞추면 정렬이 예쁘게 됨. \\
+이때, \hly{숫자가 아닌 모든 텍스트(단위 포함)는 중괄호로} 묶어줘야 함. \\
+
+아래는 다른 예시로 음수와 \approx 기호를 포함하고 있음. 포맷에 넣어줘야 자리수 정렬 가능함 \\
+\DeclareTable
+  {}
+  {\exampletabletwo}
+  {Some corresponding temperatures}
+  {l S[table-format=\approx-3.1] S[table-format=-3.1]}
+  {Temperature & {$^\circ\mathrm{C}$} & {$^\circ\mathrm{F}$} \\\hline
+    Boiling point of water & 100 & 212 \\
+    Normal body temperature & 37.0 & 98.6 \\
+    Accepted comfort level & 20 & 68 \\
+    Freezing point of water & 0 & 32 \\
+    Zero of Fahrenheit scale & \approx-18 & 0 \\
+    Scales coincide & -40 & -40}%
+명령어에 숫자 안들어감..\\
+\exampletabletwo
+
+\DeclareTable
+  {}
+  {\exampletablethree}
+  {The First Law of Thermodynamics: Four Special Cases}
+  {l >{$}r<{$}@{${}={}$}>{$}l<{$} >{$}r<{$}@{${}={}$}>{$}l<{$}}{
+  \multicolumn{5}{c}{The Law : $\Delta E_{\mathrm{int}} = Q - W$ (\autoref{eq:first_law_of_thermodynamics})} \\
+  \hline
+  Process & \multicolumn{2}{c}{Restriction} & \multicolumn{2}{c}{Consequence} \\
+  \hline
+  Adiabatic       & Q & 0             & \Delta E_{\mathrm{int}} & -W \\
+  Constant volume & W & 0             & \Delta E_{\mathrm{int}} & Q  \\
+  Closed cycle    & \Delta E_{\mathrm{int}} & 0  & Q & W \\
+  Free expansion  & Q & W = 0 & \Delta E_{\mathrm{int}} & 0}
+% >{$}r<{$}: 수학 모드로 오른쪽 정렬
+% @{${}={}$}: 가운데 등호 출력 (간격 없이)
+% 두 쌍씩 반복해서 왼쪽=오른쪽 형태 정렬을 두 번 반복함
+등호에 정렬하는 예시 \\
+\exampletablethree

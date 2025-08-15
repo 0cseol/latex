@@ -1,0 +1,154 @@
+%% 박스, 틀, 테두리 등 시각적 요소 정의
+
+%% 패키지 불러오기
+\usepackage[most]{tcolorbox}
+
+%% 박스 스타일 정의
+
+% 회색 박스 (설명, 정리 등) - 패키지 불러와야 newtcolorbox 쓸 수 있음
+\newtcolorbox{graybox}{%
+  colback=white,        % 흰색 배경
+  colframe=gray!50,     % 중간 회색 테두리
+  boxrule=1pt,          % 테두리 선 두께
+  arc=2mm,              % 둥근 모서리 반경
+  left=4pt, right=4pt,  % 좌우 여백
+  top=4pt, bottom=4pt   % 상하 여백
+}
+
+% 회색 수식 박스 - graybox에 수식 정렬만 추가
+\newtcolorbox{eqbox}[1][]{%
+  ams align,            % 수식 정렬
+  colback=gray!10,      % 연한 회색 배경
+  colframe=gray!50,     % 중간 회색 테두리
+  boxrule=1pt,          % 테두리 선 두께
+  arc=2mm,              % 둥근 모서리 반경
+  left=4pt, right=4pt,  % 좌우 여백
+  top=4pt, bottom=4pt   % 상하 여백
+}
+
+% 강조용 빨간 테두리 박스
+\newtcolorbox{redbox}{%
+  colback=white,        % 흰색 배경
+  colframe=red,         % 빨간색 테두리
+  boxrule=1pt,          % 굵은 테두리 선
+  arc=2mm,              % 살짝 둥근 모서리
+  left=4pt, right=4pt,  % 좌우 여백
+  top=4pt, bottom=4pt   % 상하 여백
+}
+
+% 강조용 파란 배경 박스
+\newtcolorbox{bluebox}{%
+  colback=blue!5,       % 아주 연한 파란 배경
+  colframe=blue!50,     % 중간 파란 테두리
+  boxrule=1pt,        % 테두리 선 두께
+  arc=2mm,              % 둥근 모서리 반경
+  left=4pt, right=4pt,  % 좌우 여백
+  top=4pt, bottom=4pt   % 상하 여백
+}
+
+% 글자만 박스로 채우는 grayinline
+\newtcbox{\grayinline}{on line,
+  colback=gray!10,
+  colframe=gray!50,
+  boxrule=0.5pt,
+  arc=2mm,
+  boxsep=1pt,
+  left=2pt, right=2pt,
+  top=1pt, bottom=1pt,
+  box align=base
+}
+
+%% sssbox 정의
+% 박스 스타일 정의
+\newtcolorbox{sssbox}[1][]{%
+  title={Sss...},       % 제목을 고정
+  colback=white,            % 내용 배경색 (본문)
+  colframe=black,           % 테두리 색 (검정)
+  coltitle=black,           % 제목 글씨색
+  colbacktitle=white,       % 제목 배경색 없음 (투명)
+  boxrule=1pt,              % 테두리 두께
+  arc=1mm,                  % 둥근 모서리
+  top=4pt, bottom=4pt,      % 상하 여백
+  left=4pt, right=4pt,      % 좌우 여백
+  #1}
+
+
+
+%% 문제풀이용 박스
+%% checkbox 정의
+\newcounter{checkbox}[section] % 번호 카운터 정의 (section 기준으로 리셋)
+% 번호 형식: chapter.section.checkbox (예: 18.1.1)
+\renewcommand{\thecheckbox}{\arabic{chapter}.\arabic{section}.\arabic{checkbox}}
+% 박스 스타일 정의
+\newtcolorbox{checkboxbox}[1][]{%
+  title=check \thecheckbox,
+  colback=white,            % 내용 배경색
+  colframe=gray!50,         % 테두리, 타이틀 배경 색
+  coltitle=black,           % 제목 글씨 검정
+  boxrule=1pt,              % 테두리 두께
+  arc=1mm,                  % 둥근 모서리
+  top=4pt, bottom=4pt,      % 상하 여백 줄이기
+  left=4pt, right=4pt,      % 좌우 여백
+  #1}                       % 사용자 정의 옵션 허용
+% 환경 정의
+\newenvironment{checkbox}
+{\refstepcounter{checkbox}\begin{checkboxbox}}{\end{checkboxbox}}
+
+%% checkbox* 정의 - 번호 없음
+% 박스 스타일 정의
+\newtcolorbox{checkboxbox*}[1][]{%
+  title=check,
+  colback=white,            % 내용 배경색
+  colframe=gray!50,         % 테두리, 타이틀 배경 색
+  coltitle=black,           % 제목 글씨 검정
+  boxrule=1pt,              % 테두리 두께
+  arc=1mm,                  % 둥근 모서리
+  top=4pt, bottom=4pt,      % 상하 여백 줄이기
+  left=4pt, right=4pt,      % 좌우 여백
+  #1}                       % 사용자 정의 옵션 허용
+% 환경 정의
+\newenvironment{checkbox*}
+{\begin{checkboxbox*}}{\end{checkboxbox*}}
+
+%% practicebox 정의
+\newcounter{practicebox}[section]
+% 번호 형식
+\renewcommand{\thepracticebox}{\arabic{chapter}.\arabic{section}.\arabic{practicebox}}
+% 박스 스타일 정의
+\newtcolorbox{practiceboxbox}[2][]{%
+  title={%
+    \ifstrempty{#2}%
+      {practice \thepracticebox}% #2가 비었을 때
+      {practice \thepracticebox ~~ #2}% #2가 주어졌을 때
+  },
+  colback=white,            % 내용 배경색
+  colframe=black,           % 테두리, 타이틀 배경 색
+  coltitle=white,           % 제목 글씨 검정
+  boxrule=1pt,              % 테두리 두께
+  arc=1mm,                  % 둥근 모서리
+  top=4pt, bottom=4pt,      % 상하 여백 줄이기
+  left=4pt, right=4pt,      % 좌우 여백
+  #1}                       % 사용자 정의 옵션 허용
+% 환경 정의
+\newenvironment{practicebox}
+{\refstepcounter{practicebox}\begin{practiceboxbox}}{\end{practiceboxbox}}
+
+%% practicebox* 정의 - 번호 없음
+% 박스 스타일 정의
+\newtcolorbox{practiceboxbox*}[2][]{%
+  title={%
+    \ifstrempty{#2}%
+      {practice}% #2가 비었을 때
+      {practice ~~ #2}% #2가 주어졌을 때
+  },
+  colback=white,            % 내용 배경색
+  colframe=black,           % 테두리, 타이틀 배경 색
+  coltitle=white,           % 제목 글씨 검정
+  boxrule=1pt,              % 테두리 두께
+  arc=1mm,                  % 둥근 모서리
+  top=4pt, bottom=4pt,      % 상하 여백 줄이기
+  left=4pt, right=4pt,      % 좌우 여백
+  #1}                       % 사용자 정의 옵션 허용
+% 환경 정의
+\newenvironment{practicebox*}
+{\begin{practiceboxbox*}}{\end{practiceboxbox*}}
