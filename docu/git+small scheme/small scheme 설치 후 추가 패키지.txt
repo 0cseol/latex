@@ -5,11 +5,13 @@ cmd 관리자 권한으로 실행 후
 tlmgr update --self --all % 
 
 한번에 하려면 다음과 같이 입력
-tlmgr install xifthen ifmtarg xstring luatexko transparent luacolor lua-ul import siunitx multirow tikzpagenodes ifoddpage enumitem tcolorbox pdfcol
+tlmgr install xifthen ifmtarg luatexko transparent luacolor lua-ul import siunitx multirow tikzfill tikzpagenodes ifoddpage enumitem tcolorbox pdfcol
 
+총 10MB정도 함
 
 설치해야 할 패키지
-tlmgr install xifthen ifmtarg xstring
+tlmgr install xifthen
+tlmgr install ifmtarg
 tlmgr install luatexko
 tlmgr install transparent
 tlmgr install luacolor
@@ -17,6 +19,7 @@ tlmgr install lua-ul
 tlmgr install import
 tlmgr install siunitx
 tlmgr install multirow
+tlmgr install tikzfill
 tlmgr install tikzpagenodes
 tlmgr install ifoddpage
 tlmgr install enumitem
