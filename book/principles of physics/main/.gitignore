@@ -1,0 +1,3 @@
+# main.tex 제외 모든 main.* 무시
+main.*
+!main.tex
