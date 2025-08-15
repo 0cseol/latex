@@ -1,0 +1,4 @@
+전역설정하려면 bash에서 순서대로 입력
+
+git config --global user.name "0cseol"
+git config --global user.email "youngchanseol@gmail.com"
