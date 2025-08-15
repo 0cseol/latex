@@ -1,0 +1,33 @@
+1. git add는 변경된 파일을 커밋 대상으로 올리는 단계
+ - 변경 사항을 바로 커밋하지 않고, 먼저 스테이징 영역(staging area)에 올려야 함
+ - 예를 들어 git add main.tex하면 해당 파일 변경분을 스테이징에 올림
+ - git add .는 현재 폴더 이하의 모든 변경 파일을 스테이징 영역에 올림
+2. git commit은 스테이징된 변경 내용을 기록
+ - 변동 내역을 작성해야 함. update 등으로 기록할 수 있음. 귀찮음
+3. git push는 기록된 변경을 원격 저장소(GitHub)에 반영
+
+bash에서
+git add .
+git commit -m "update"
+git push
+를 매번 입력하기 귀찮으니
+
+한 번에 실행되는 커맨드 만들기 (Task)
+Ctrl+Shift+P 입력
+Tasks: Configure Task → Create tasks.json file from template
+
+Others 선택
+
+.vscode/tasks.json에 아래 내용 작성(다른 코드 있으면 task에 추가)
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Git ACP",
+      "type": "shell",
+      "command": "git add . && git commit -m \"update\" && git push",
+      "problemMatcher": []
+    }
+  ]
+}
