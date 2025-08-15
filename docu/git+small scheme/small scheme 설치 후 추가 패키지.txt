@@ -1,0 +1,24 @@
+부족한 패키지 설치해야 함
+cmd 관리자 권한으로 실행 후
+
+업데이트 필요하면 다음 코드 실행
+tlmgr update --self --all % 
+
+한번에 하려면 다음과 같이 입력
+tlmgr install xifthen ifmtarg xstring luatexko transparent luacolor lua-ul import siunitx multirow tikzpagenodes ifoddpage enumitem tcolorbox pdfcol
+
+
+설치해야 할 패키지
+tlmgr install xifthen ifmtarg xstring
+tlmgr install luatexko
+tlmgr install transparent
+tlmgr install luacolor
+tlmgr install lua-ul
+tlmgr install import
+tlmgr install siunitx
+tlmgr install multirow
+tlmgr install tikzpagenodes
+tlmgr install ifoddpage
+tlmgr install enumitem
+tlmgr install tcolorbox
+tlmgr install pdfcol

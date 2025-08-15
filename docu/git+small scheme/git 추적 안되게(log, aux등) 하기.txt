@@ -1,0 +1,22 @@
+
+
+1. main 폴더에서
+.gitignore 파일 만들고 다음 내용 작성
+
+# main.tex 제외 모든 main.* 무시
+main.*
+!main.tex
+
+
+
+2. 터미널 - git bash에서
+cd "/d/seoldrive/git/latex" 등으로 이동해야 함(.git이 있는 곳으로 이동)
+
+ls -a
+여기서 .git 폴더가 보여야 함. 있으면 여기가 저장소 루트임
+
+이제 명령어 순서대로 실행
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+git push
