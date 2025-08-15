@@ -1,4 +1,4 @@
-
+<pre>
 book/
 ├── structure/              사용자 정의 매크로(\newcommand) 저장 - 반복 스타일(색, 강조) 통합
 │  ├── preamble.tex         패키지/옵션(폰트, 여백 등) 설정 - def.sty 자체를 포함하여 main에서 preamble만 호출
@@ -43,3 +43,4 @@ book/
 모든 경로 해석은 main.tex 기준이므로, structure의 파일에 가려면 두 단계 상위 계열로 올라가야 함.
 예를 들어 다음과 같이 사용함.
 \input{../../structure/preamble.tex}
+</pre>
