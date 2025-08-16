@@ -71,24 +71,19 @@ SlantedFeatures = {FakeSlant=0.3},]{UnBatang} % 모든 글꼴 그대로 유지�
 }
 
 % 글 마감할 때 뒷표지 만들기
-
 % #1 = 홀수페이지 내용, #2 = 짝수페이지 가운데 큰 글, #3 = 짝수페이지 하단 작은 글
 \newcommand{\chaptercover}[2]{%
-  \ifodd\value{page}
-    % 홀수 끝인 경우 바로 커버 삽입
+  \ifodd\value{page} % 홀수 끝인 경우 바로 커버 삽입
     \newpage
-  \else
-    % 짝수 끝인 경우 빈페이지 삽입
+  \else % 짝수 끝인 경우 빈페이지 삽입
     \cleardoublepage
      \ % 빈 내용 삽입
   \fi
-  % 커버 페이지 (짝수 페이지)
-  \thispagestyle{empty}
-  \drawlinesfalse
-  \restoregeometry
+  \thispagestyle{empty} % 커버 페이지 (짝수 페이지)
+  \drawlinesfalse % 선 긋기 중단
+  \restoregeometry % 용지 설정 복원
   \vspace*{\fill}
   \begin{center}{\large #1}\end{center}
   \vspace*{\fill}
   \begin{center}{\small #2}\end{center}
-  \newpage
-}
+  \newpage}
